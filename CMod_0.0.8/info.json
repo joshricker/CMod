@@ -1,0 +1,10 @@
+{
+  "name": "CMod",
+  "version": "0.0.8",
+  "title": "CMod",
+  "author": "Codec",
+  "homepage": "",
+  "factorio_version": "0.13",
+  "dependencies": ["base", "Yuoki >= 0.2.40", "5dim_transport", "5dim_logistic"],
+  "description": "Some QoL changes."
+}
