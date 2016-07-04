@@ -1,0 +1,10 @@
+--Warehousing Storehouse -> 5Dim Mining & Processing
+--Warehousing Warehouse -> 5Dim Mining & Processing
+--Warehousing Active Provider Storehouse -> 5Dim Logistic
+--Warehousing Active Provider Warehouse -> 5Dim Logistic
+--Warehousing Passive Provider Storehouse -> 5Dim Logistic
+--Warehousing Passive Provider Warehouse -> 5Dim Logistic
+--Warehousing Requester Storehouse -> 5Dim Logistic
+--Warehousing Requester Warehouse -> 5Dim Logistic
+--Warehousing Storage Storehouse -> 5Dim Logistic
+--Warehousing Storage Warehouse -> 5Dim Logistic

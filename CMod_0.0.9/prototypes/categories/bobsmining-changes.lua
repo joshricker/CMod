@@ -1,0 +1,18 @@
+--bobsmining Brass Axe -> 5Dim Mining & Processing
+--bobsmining Cobalt Steel Axe -> 5Dim Mining & Processing
+--bobsmining Titanium Axe -> 5Dim Mining & Processing
+--bobsmining Tungsten Axe -> 5Dim Mining & Processing
+--bobsmining Diamond Axe -> 5Dim Mining & Processing
+--bobsmining Electric Mining Drill MK2 -> 5Dim Mining & Processing
+--bobsmining Electric Mining Drill MK3 -> 5Dim Mining & Processing
+--bobsmining Electric Mining Drill MK4 -> 5Dim Mining & Processing
+--bobsmining Electric Mining Drill MK5 -> 5Dim Mining & Processing
+--bobsmining Electric Large Area Mining Drill MK2 -> 5Dim Mining & Processing
+--bobsmining Electric Large Area Mining Drill MK3 -> 5Dim Mining & Processing
+--bobsmining Electric Large Area Mining Drill MK4 -> 5Dim Mining & Processing
+--bobsmining Electric Large Area Mining Drill MK5 -> 5Dim Mining & Processing
+--bobsmining Pumpjack MK2 -> 5Dim Mining & Processing
+--bobsmining Pumpjack MK3 -> 5Dim Mining & Processing
+--bobsmining Pumpjack MK4 -> 5Dim Mining & Processing
+--bobsmining Pumpjack MK5 -> 5Dim Mining & Processing
+--bobsmining 
