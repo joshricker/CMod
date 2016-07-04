@@ -82,6 +82,14 @@ data.raw["electric-turret"]["y_turret_laser22f12"]["attack_parameters"]["ammo_ty
 data.raw["radar"]["yi_radar"].max_distance_of_nearby_sector_revealed = 10
 data.raw["recipe"]["y-wash-dirt-recipe"].results={{type="item", name="stone", amount=8, },{type="item", name="y-crystal2", amount=5, },{type="fluid", name="y-con_water", amount=60 }}
 
+data.raw["roboport"]["yi_roboport"].energy_usage = "150kW"
+data.raw["roboport"]["yi_roboport"].charging_energy = "2MW"
+data.raw["roboport"]["yi_roboport"].energy_source = {type = "electric", usage_priority = "secondary-input", input_flow_limit = "10MW", buffer_capacity = "48MJ"}
+
+data.raw["roboport"]["5d-roboport-2"].energy_usage = "150kW"
+data.raw["roboport"]["5d-roboport-2"].charging_energy = "2MW"
+data.raw["roboport"]["5d-roboport-2"].energy_source = {type = "electric", usage_priority = "secondary-input", input_flow_limit = "10MW", buffer_capacity = "48MJ"}
+
 data.raw["pipe"]["5d-pipe-mk2"].fluid_box = {base_area = 0.5,pipe_connections ={{ position = {0, -1} },{ position = {1, 0} },{ position = {0, 1} },{ position = {-1, 0} }},}
 data.raw["pipe-to-ground"]["5d-pipe-to-ground-mk2"].fluid_box ={base_area = 0.5,pipe_covers = pipecoverspictures(),pipe_connections ={{ position = {0, -1} },{position = {0, 1},max_underground_distance = 10}},}
 data.raw["pipe-to-ground"]["5d-pipe-to-ground-mk2-30"].fluid_box ={base_area = 0.5,pipe_covers = pipecoverspictures(),pipe_connections ={{ position = {0, -1} },{position = {0, 1},max_underground_distance = 30}},}
