@@ -55,6 +55,12 @@ data.raw["assembling-machine"]["y-crusher"].module_specification = {module_slots
 data.raw["assembling-machine"]["y-crusher"].crafting_speed = 2.0
 data.raw["assembling-machine"]["y-crusher"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
 
+data.raw["loader"]["loader"].speed = 0.04
+data.raw["loader"]["fast-loader"].speed = 0.07
+data.raw["loader"]["express-loader"].speed = 0.1
+
+
+
 data.raw["inserter"]["y-inserter-fast"].extension_speed = 0.45
 data.raw["inserter"]["y-inserter-fast"].rotation_speed = 0.3
 data.raw["inserter"]["y-inserter-s4"].extension_speed = 0.5
