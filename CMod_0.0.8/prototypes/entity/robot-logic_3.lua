@@ -22,7 +22,7 @@ data:extend({
     collision_box = {{0, 0}, {0, 0}},
     selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
     max_payload_size = 10,
-    speed = 100.00,
+    speed = 100000.00,
     transfer_distance = 0.5,
     max_energy = "30kJ",
     energy_per_tick = "0.00kJ",
