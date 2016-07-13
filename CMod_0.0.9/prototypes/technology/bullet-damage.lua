@@ -1,17 +1,17 @@
 data:extend({
-  {
+ {
     type = "technology",
-    name = "cm-laser-turret-damage-7",
-    icon = "__base__/graphics/technology/laser-turret-damage.png",
+    name = "cm-bullet-damage-7",
+    icon = "__base__/graphics/technology/bullet-damage.png",
     effects =
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
+        ammo_category = "bullet",
         modifier = "0.5"
       }
     },
-    prerequisites = {"laser-turret-damage-6"},
+    prerequisites = {"bullet-damage-6"},
     unit =
     {
       count = 400,
@@ -25,21 +25,22 @@ data:extend({
       time = 60
     },
     upgrade = true,
-    order = "e-n-f"
+    order = "e-l-f"
   },
+  
   {
     type = "technology",
-    name = "cm-laser-turret-damage-8",
-    icon = "__base__/graphics/technology/laser-turret-damage.png",
+    name = "cm-bullet-damage-8",
+    icon = "__base__/graphics/technology/bullet-damage.png",
     effects =
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = "0.65"
+        ammo_category = "bullet",
+        modifier = "0.6"
       }
     },
-    prerequisites = {"cm-laser-turret-damage-7"},
+    prerequisites = {"cm-bullet-damage-7"},
     unit =
     {
       count = 600,
@@ -53,24 +54,25 @@ data:extend({
       time = 60
     },
     upgrade = true,
-    order = "e-n-f"
+    order = "e-l-f"
   },
+  
   {
     type = "technology",
-    name = "cm-laser-turret-damage-9",
-    icon = "__base__/graphics/technology/laser-turret-damage.png",
+    name = "cm-bullet-damage-9",
+    icon = "__base__/graphics/technology/bullet-damage.png",
     effects =
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = "0.85"
+        ammo_category = "bullet",
+        modifier = "0.7"
       }
     },
-    prerequisites = {"cm-laser-turret-damage-8"},
+    prerequisites = {"cm-bullet-damage-8"},
     unit =
     {
-      count = 900,
+      count = 800,
       ingredients =
       {
         {"alien-science-pack", 1},
@@ -81,24 +83,25 @@ data:extend({
       time = 60
     },
     upgrade = true,
-    order = "e-n-f"
+    order = "e-l-f"
   },
+  
   {
     type = "technology",
-    name = "cm-laser-turret-damage-10",
-    icon = "__base__/graphics/technology/laser-turret-damage.png",
+    name = "cm-bullet-damage-10",
+    icon = "__base__/graphics/technology/bullet-damage.png",
     effects =
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = "1.1"
+        ammo_category = "bullet",
+        modifier = "1"
       }
     },
-    prerequisites = {"cm-laser-turret-damage-9"},
+    prerequisites = {"cm-bullet-damage-9"},
     unit =
     {
-      count = 1450,
+      count = 2000,
       ingredients =
       {
         {"alien-science-pack", 2},
@@ -109,24 +112,25 @@ data:extend({
       time = 60
     },
     upgrade = true,
-    order = "e-n-f"
+    order = "e-l-f"
   },
-    {
+  
+  {
     type = "technology",
-    name = "cm-laser-turret-damage-11",
-    icon = "__base__/graphics/technology/laser-turret-damage.png",
+    name = "cm-bullet-damage-11",
+    icon = "__base__/graphics/technology/bullet-damage.png",
     effects =
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = "1.4"
+        ammo_category = "bullet",
+        modifier = "1.5"
       }
     },
-    prerequisites = {"cm-laser-turret-damage-10"},
+    prerequisites = {"cm-bullet-damage-10"},
     unit =
     {
-      count = 1600,
+      count = 4000,
       ingredients =
       {
         {"alien-science-pack", 4},
@@ -137,24 +141,25 @@ data:extend({
       time = 60
     },
     upgrade = true,
-    order = "e-n-f"
+    order = "e-l-f"
   },
-    {
+  
+  {
     type = "technology",
-    name = "cm-laser-turret-damage-12",
-    icon = "__base__/graphics/technology/laser-turret-damage.png",
+    name = "cm-bullet-damage-12",
+    icon = "__base__/graphics/technology/bullet-damage.png",
     effects =
     {
       {
         type = "ammo-damage",
-        ammo_category = "laser-turret",
-        modifier = "2.5"
+        ammo_category = "bullet",
+        modifier = "2"
       }
     },
-    prerequisites = {"cm-laser-turret-damage-11"},
+    prerequisites = {"cm-bullet-damage-11"},
     unit =
     {
-      count = 3000,
+      count = 6000,
       ingredients =
       {
         {"alien-science-pack", 8},
@@ -165,7 +170,6 @@ data:extend({
       time = 60
     },
     upgrade = true,
-    order = "e-n-f"
+    order = "e-l-f"
   },
-
 })

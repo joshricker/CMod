@@ -3,11 +3,19 @@ require("prototypes.technology.robotcapacity")
 require("prototypes.technology.logslots")
 require("prototypes.entity.inserter-vfast")
 require("prototypes.crafting.inserter-vfast")
+
+--Non-smart Stack 9001
+require("prototypes.entity.inserter-vfast-ns")
+require("prototypes.crafting.inserter-vfast-ns")
+
 require("prototypes.technology.loaders")
 require("prototypes.technology.flamethrower-damage")
 require("prototypes.technology.crafting-speed")
 require("prototypes.technology.laser-turret-damage")
 require("prototypes.technology.run-speed")
+require("prototypes.technology.trash-slots")
+require("prototypes.technology.bullet-damage")
+
 --Comp Solars and accumulators
 require("prototypes.entity.advanced-accumulator")
 require("prototypes.item.advanced-accumulator")
@@ -33,6 +41,7 @@ require("prototypes.entity.ultimate-solar")
 require("prototypes.item.ultimate-solar")
 require("prototypes.crafting.ultimate-solar")
 require("prototypes.technology.ultimate-solar")
+
 --Tele bots
 require("prototypes.technology.telebots")
 require("prototypes.entity.robot-logic_3")
@@ -59,22 +68,13 @@ data.raw["loader"]["loader"].speed = 0.045
 data.raw["loader"]["fast-loader"].speed = 0.075
 data.raw["loader"]["express-loader"].speed = 0.1
 
-
-
-data.raw["inserter"]["y-inserter-fast"].extension_speed = 0.45
-data.raw["inserter"]["y-inserter-fast"].rotation_speed = 0.3
-data.raw["inserter"]["y-inserter-s4"].extension_speed = 0.5
-data.raw["inserter"]["y-inserter-s4"].rotation_speed = 0.2
-data.raw["inserter"]["y-inserter-smart"].extension_speed = 0.25
-data.raw["inserter"]["y-inserter-smart"].rotation_speed = 0.25
-
 data.raw["recipe"]["y-water-gen-fluid-recipe"].results= {{type="fluid", name="water", amount=2000, },}
 
-data.raw["electric-turret"]["y-weapon-ztt"]["energy_source"].buffer_capacity = "200MJ"
-data.raw["electric-turret"]["y-weapon-ztt"]["energy_source"].input_flow_limit = "200MW"
+data.raw["electric-turret"]["y-weapon-ztt"]["energy_source"].buffer_capacity = "500MJ"
+data.raw["electric-turret"]["y-weapon-ztt"]["energy_source"].input_flow_limit = "500MW"
 data.raw["electric-turret"]["y-weapon-ztt"]["attack_parameters"].cooldown = 5
 data.raw["electric-turret"]["y-weapon-ztt"]["attack_parameters"].damage_modifier = 10
-data.raw["electric-turret"]["y-weapon-ztt"]["attack_parameters"]["ammo_type"].energy_consumption = "3250KJ"
+data.raw["electric-turret"]["y-weapon-ztt"]["attack_parameters"]["ammo_type"].energy_consumption = "6750KJ"
 data.raw["electric-turret"]["y-weapon-ztt"]["attack_parameters"]["ammo_type"].action = {type = "direct",action_delivery ={{type = "projectile",projectile = "cyan-laser",starting_speed = 3.75,},}}
 
 data.raw["electric-turret"]["y-laser-def-s4"]["energy_source"].buffer_capacity = "10MJ"
