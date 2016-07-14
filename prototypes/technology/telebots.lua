@@ -21,12 +21,12 @@ data:extend({
     prerequisites = {"robots-2"},
     unit =
     {
-      count = 6000,
+      count = 1500,
       ingredients =
       {
-        {"science-pack-1", 15},
-        {"science-pack-2", 15},
-		{"science-pack-3", 15}
+        {"science-pack-1", 8},
+        {"science-pack-2", 8},
+		{"science-pack-3", 8}
       },
       time = 30
     },
