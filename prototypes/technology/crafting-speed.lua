@@ -7,7 +7,7 @@ data:extend({
     {
       {
         type = "character-crafting-speed",
-        modifier = "0.3"
+        modifier = "1"
       }
     },
     unit =
@@ -30,7 +30,7 @@ data:extend({
     {
       {
         type = "character-crafting-speed",
-        modifier = "0.3"
+        modifier = "1"
       }
     },
     prerequisites = {"cm-crafting-speed-1"},
@@ -55,7 +55,7 @@ data:extend({
     {
       {
         type = "character-crafting-speed",
-        modifier = "0.3"
+        modifier = "1"
       }
     },
     prerequisites = {"cm-crafting-speed-2"},
@@ -81,7 +81,7 @@ data:extend({
     {
       {
         type = "character-crafting-speed",
-        modifier = "0.3"
+        modifier = "1"
       }
     },
     prerequisites = {"cm-crafting-speed-3"},
@@ -93,7 +93,7 @@ data:extend({
         {"science-pack-1", 1},
 		{"science-pack-2", 1},
 		{"science-pack-3", 1},
-		{"alien-science-pack", 1}
+		{"production-science-pack", 1}
       },
       time = 60
     },
@@ -108,7 +108,7 @@ data:extend({
     {
       {
         type = "character-crafting-speed",
-        modifier = "0.3"
+        modifier = "1"
       }
     },
     prerequisites = {"cm-crafting-speed-4"},
@@ -120,7 +120,7 @@ data:extend({
         {"science-pack-1", 1},
 		{"science-pack-2", 1},
 		{"science-pack-3", 1},
-		{"alien-science-pack", 1}
+		{"production-science-pack", 1}
       },
       time = 60
     },
@@ -135,7 +135,7 @@ data:extend({
     {
       {
         type = "character-crafting-speed",
-        modifier = "0.3"
+        modifier = "1"
       }
     },
     prerequisites = {"cm-crafting-speed-5"},
@@ -147,7 +147,7 @@ data:extend({
         {"science-pack-1", 2},
 		{"science-pack-2", 2},
 		{"science-pack-3", 2},
-		{"alien-science-pack", 2}
+		{"production-science-pack", 2}
       },
       time = 60
     },

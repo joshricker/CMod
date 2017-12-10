@@ -1,10 +1,10 @@
 {
   "name": "CMod",
-  "version": "0.0.9",
+  "version": "0.2.06",
   "title": "CMod",
   "author": "Codec",
   "homepage": "",
-  "factorio_version": "0.13",
-  "dependencies": ["base", "Yuoki >= 0.2.40", "5dim_transport", "5dim_logistic"],
+  "factorio_version": "0.15",
+  "dependencies": ["base", "? Yuoki >= 0.2.40", "? yi_railway", "? yi_engines", "? bobplates", "? bobelectronics", "? bobgreenhouse", "? angelspetrochem", "? Helicopters"],
   "description": "Some QoL changes."
 }

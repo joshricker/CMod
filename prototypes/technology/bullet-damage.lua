@@ -17,7 +17,7 @@ data:extend({
       count = 400,
       ingredients =
       {
-        {"alien-science-pack", 1},
+        {"military-science-pack", 1},
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1}
@@ -46,7 +46,7 @@ data:extend({
       count = 600,
       ingredients =
       {
-        {"alien-science-pack", 1},
+        {"military-science-pack", 1},
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1}
@@ -75,7 +75,7 @@ data:extend({
       count = 800,
       ingredients =
       {
-        {"alien-science-pack", 1},
+        {"military-science-pack", 1},
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1}
@@ -104,7 +104,7 @@ data:extend({
       count = 2000,
       ingredients =
       {
-        {"alien-science-pack", 2},
+        {"military-science-pack", 2},
         {"science-pack-1", 2},
         {"science-pack-2", 2},
         {"science-pack-3", 2}
@@ -133,7 +133,7 @@ data:extend({
       count = 4000,
       ingredients =
       {
-        {"alien-science-pack", 4},
+        {"military-science-pack", 4},
         {"science-pack-1", 4},
         {"science-pack-2", 4},
         {"science-pack-3", 4}
@@ -162,7 +162,7 @@ data:extend({
       count = 6000,
       ingredients =
       {
-        {"alien-science-pack", 8},
+        {"military-science-pack", 8},
         {"science-pack-1", 8},
         {"science-pack-2", 8},
         {"science-pack-3", 8}

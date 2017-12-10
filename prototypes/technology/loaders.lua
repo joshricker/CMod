@@ -1,73 +1,88 @@
-data:extend({	
-	{
-        type = "technology",
-        name = "cm-loaders-1",
-        icon = "__base__/graphics/technology/logistics.png",
-        effects = 
-        {
-            {
-                type = "unlock-recipe",
-                recipe = "loader",
-            },
-        },
-        unit = 
-        {
-            count = 25,
-            ingredients = 
-            {
-                {"science-pack-1", 1},
-            },
-            time = 30,
-        },
-        order = "c",
+data:extend({
+ {
+    type = "technology",
+    name = "cm-loader",
+    icon = "__base__/graphics/technology/logistics.png",
+    upgrade = true,
+    order = "c-k-f-b",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "loader"
+      },
     },
+    prerequisites = 
 	{
-        type = "technology",
-        name = "cm-loaders-2",
-        icon = "__base__/graphics/technology/logistics.png",
-        effects = 
-        {
-            {
-                type = "unlock-recipe",
-                recipe = "fast-loader",
-            },
-        },
-        prerequisites = {"cm-loaders-1"},
-        unit = 
-        {
-            count = 25,
-            ingredients = 
-            {
-                {"science-pack-1", 1},
-                {"science-pack-2", 1},
-            },
-            time = 30,
-        },
-        order = "c-a",
+	  "logistics",
+	},
+    unit =
+    {
+      count = 25,
+      time = 15,
+      ingredients = 
+	   {
+         {"science-pack-1",1},
+       },
     },
+  },
+  {
+    type = "technology",
+    name = "cm-loader-2",
+    icon = "__base__/graphics/technology/logistics.png",
+    upgrade = true,
+    order = "c-k-f-b",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "fast-loader"
+      },
+    },
+    prerequisites = 
 	{
-        type = "technology",
-        name = "cm-loaders-3",
-        icon = "__base__/graphics/technology/logistics.png",
-        effects = 
-        {
-            {
-                type = "unlock-recipe",
-                recipe = "express-loader",
-            },
-        },
-        prerequisites = {"cm-loaders-2"},
-        unit = 
-        {
-            count = 50,
-            ingredients = 
-            {
-                {"science-pack-1", 1},
-                {"science-pack-2", 1},
-				{"science-pack-3", 1},
-            },
-            time = 30,
-        },
-        order = "c-a",
-  }, 
+	  "cm-loader",
+	  "logistics-2",
+	},
+    unit =
+    {
+      count = 50,
+      time = 30,
+      ingredients = 
+	   {
+         {"science-pack-1",1},
+         {"science-pack-2",1},
+       },
+    },
+  },
+  {
+    type = "technology",
+    name = "cm-loader-3",
+    icon = "__base__/graphics/technology/logistics.png",
+    upgrade = true,
+    order = "c-k-f-b",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "express-loader"
+      },
+    },
+    prerequisites = 
+	{
+	  "cm-loader-2",
+	  "logistics-3",
+	},
+    unit =
+    {
+      count = 100,
+      time = 30,
+      ingredients = 
+	   {
+         {"science-pack-1",1},
+         {"science-pack-2",1},
+		 {"science-pack-3",1},
+       },
+    },
+  },
 })

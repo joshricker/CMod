@@ -29,7 +29,7 @@ data:extend(
       count = 600,
       ingredients =
       {
-        {"alien-science-pack", 2},
+        {"military-science-pack", 2},
         {"science-pack-1", 2},
         {"science-pack-2", 2},
         {"science-pack-3", 2}
@@ -62,7 +62,7 @@ data:extend(
       count = 800,
       ingredients =
       {
-        {"alien-science-pack", 2},
+        {"military-science-pack", 2},
         {"science-pack-1", 2},
         {"science-pack-2", 2},
         {"science-pack-3", 2}
@@ -95,7 +95,7 @@ data:extend(
       count = 1000,
       ingredients =
       {
-        {"alien-science-pack", 2},
+        {"military-science-pack", 2},
         {"science-pack-1", 2},
         {"science-pack-2", 2},
         {"science-pack-3", 2}
@@ -128,7 +128,7 @@ data:extend(
       count = 5000,
       ingredients =
       {
-        {"alien-science-pack", 5},
+        {"military-science-pack", 5},
         {"science-pack-1", 5},
         {"science-pack-2", 5},
         {"science-pack-3", 5}

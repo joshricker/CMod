@@ -16,7 +16,7 @@ data:extend(
 		unit = {
 		  count = 500,
 		  ingredients = {
-			{"alien-science-pack", 1},
+			{"high-tech-science-pack", 1},
 			{"science-pack-1", 1},
 			{"science-pack-2", 1},
 			{"science-pack-3", 1}
@@ -42,7 +42,7 @@ data:extend(
 		unit = {
 		  count = 550,
 		  ingredients = {
-			{"alien-science-pack", 1},
+			{"high-tech-science-pack", 1},
 			{"science-pack-1", 1},
 			{"science-pack-2", 1},
 			{"science-pack-3", 1}
@@ -68,7 +68,7 @@ data:extend(
 		unit = {
 		  count = 600,
 		  ingredients = {
-			{"alien-science-pack", 1},
+			{"high-tech-science-pack", 1},
 			{"science-pack-1", 1},
 			{"science-pack-2", 1},
 			{"science-pack-3", 1}
@@ -94,7 +94,7 @@ data:extend(
 		unit = {
 		  count = 700,
 		  ingredients = {
-			{"alien-science-pack", 1},
+			{"high-tech-science-pack", 1},
 			{"science-pack-1", 1},
 			{"science-pack-2", 1},
 			{"science-pack-3", 1}
@@ -120,7 +120,7 @@ data:extend(
 		unit = {
 		  count = 800,
 		  ingredients = {
-			{"alien-science-pack", 1},
+			{"high-tech-science-pack", 1},
 			{"science-pack-1", 1},
 			{"science-pack-2", 1},
 			{"science-pack-3", 1}
@@ -146,7 +146,7 @@ data:extend(
 		unit = {
 		  count = 900,
 		  ingredients = {
-			{"alien-science-pack", 1},
+			{"high-tech-science-pack", 1},
 			{"science-pack-1", 1},
 			{"science-pack-2", 1},
 			{"science-pack-3", 1}
@@ -172,7 +172,7 @@ data:extend(
 		unit = {
 		  count = 2000,
 		  ingredients = {
-			{"alien-science-pack", 1},
+			{"high-tech-science-pack", 1},
 			{"science-pack-1", 1},
 			{"science-pack-2", 1},
 			{"science-pack-3", 1}
@@ -198,7 +198,7 @@ data:extend(
 		unit = {
 		  count = 4000,
 		  ingredients = {
-			{"alien-science-pack", 1},
+			{"high-tech-science-pack", 1},
 			{"science-pack-1", 1},
 			{"science-pack-2", 1},
 			{"science-pack-3", 1}

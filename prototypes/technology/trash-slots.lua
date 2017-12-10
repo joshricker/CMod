@@ -7,7 +7,7 @@ data:extend({
     {
       {
         type = "character-logistic-trash-slots",
-        modifier = 5
+        modifier = 6
       }
     },
     prerequisites = {"character-logistic-trash-slots-2"},
@@ -33,7 +33,7 @@ data:extend({
     {
       {
         type = "character-logistic-trash-slots",
-        modifier = 5
+        modifier = 6
       }
     },
     prerequisites = {"cm-character-logistic-trash-slots-3"},

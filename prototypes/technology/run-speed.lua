@@ -7,7 +7,7 @@ data:extend({
     {
       {
         type = "character-running-speed",
-        modifier = "0.1"
+        modifier = "0.2"
       }
     },
     unit =
@@ -30,7 +30,7 @@ data:extend({
     {
       {
         type = "character-running-speed",
-        modifier = "0.1"
+        modifier = "0.2"
       }
     },
     prerequisites = {"cm-running-speed-1"},
@@ -55,7 +55,7 @@ data:extend({
     {
       {
         type = "character-running-speed",
-        modifier = "0.1"
+        modifier = "0.2"
       }
     },
     prerequisites = {"cm-running-speed-2"},
