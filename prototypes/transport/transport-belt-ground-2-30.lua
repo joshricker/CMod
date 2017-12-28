@@ -4,6 +4,7 @@ data:extend({
     type = "item",
     name = "cm-mk2-transport-belt-to-ground-30",
     icon = "__CMod__/graphics/icons/icon_cm_ground-structure_2_30_.png",
+    icon_size = 32,
     flags = {"goes-to-quickbar"},
     subgroup = "transport-ground-30",
     order = "b",
@@ -31,6 +32,7 @@ data:extend({
     type = "underground-belt",
     name = "cm-mk2-transport-belt-to-ground-30",
     icon = "__base__/graphics/icons/fast-underground-belt.png",
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation", "fast-replaceable-no-build-while-moving"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "cm-mk2-transport-belt-to-ground-30"},
     max_health = 60,
@@ -39,6 +41,15 @@ data:extend({
     underground_sprite =
     {
       filename = "__core__/graphics/arrows/underground-lines.png",
+      priority = "high",
+      width = 64,
+      height = 64,
+      x = 64,
+      scale = 0.5
+    },
+    underground_remove_belts_sprite =
+    {
+      filename = "__core__/graphics/arrows/underground-lines-remove.png",
       priority = "high",
       width = 64,
       height = 64,

@@ -3,6 +3,7 @@ data:extend({
     type = "technology",
     name = "cm-bullet-damage-7",
     icon = "__base__/graphics/technology/bullet-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -32,6 +33,7 @@ data:extend({
     type = "technology",
     name = "cm-bullet-damage-8",
     icon = "__base__/graphics/technology/bullet-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -61,6 +63,7 @@ data:extend({
     type = "technology",
     name = "cm-bullet-damage-9",
     icon = "__base__/graphics/technology/bullet-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -90,6 +93,7 @@ data:extend({
     type = "technology",
     name = "cm-bullet-damage-10",
     icon = "__base__/graphics/technology/bullet-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -119,6 +123,7 @@ data:extend({
     type = "technology",
     name = "cm-bullet-damage-11",
     icon = "__base__/graphics/technology/bullet-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -148,6 +153,7 @@ data:extend({
     type = "technology",
     name = "cm-bullet-damage-12",
     icon = "__base__/graphics/technology/bullet-damage.png",
+    icon_size = 128,
     effects =
     {
       {

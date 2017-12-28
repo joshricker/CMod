@@ -3,6 +3,7 @@ data:extend({
     type = "item",
     name = "cm-waterfill",
     icon = "__CMod__/graphics/icons/water.png",
+    icon_size = 32,
     flags = {"goes-to-main-inventory"},
     subgroup = "terrain",
     order = "c[landfill]-a[dirt]",
@@ -31,6 +32,7 @@ data:extend({
     type = "technology",
     name = "cm-waterfill",
     icon = "__CMod__/graphics/icons/water.png",
+    icon_size = 32,
     prerequisites = {"landfill"},
     unit =
     {

@@ -3,6 +3,7 @@ data:extend({
     type = "technology",
     name = "cm-character-logistic-slots-7",
     icon = "__base__/graphics/technology/character-logistic-slots.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -30,6 +31,7 @@ data:extend({
     type = "technology",
     name = "cm-character-logistic-slots-8",
     icon = "__base__/graphics/technology/character-logistic-slots.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -57,6 +59,7 @@ data:extend({
     type = "technology",
     name = "cm-character-logistic-slots-9",
     icon = "__base__/graphics/technology/character-logistic-slots.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -84,6 +87,7 @@ data:extend({
     type = "technology",
     name = "cm-character-logistic-slots-10",
     icon = "__base__/graphics/technology/character-logistic-slots.png",
+    icon_size = 128,
     effects =
     {
       {

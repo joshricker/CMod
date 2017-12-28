@@ -5,10 +5,11 @@ data.raw["technology"]["worker-robots-speed-5"].effects = {{type = "worker-robot
 
 data:extend(
 {
-	  {
+      {
     type = "technology",
     name = "cm-worker-robots-speed-6",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
+    icon_size = 128,
     effects = {
       {
         type = "worker-robot-speed",
@@ -24,7 +25,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1},
-		{"high-tech-science-pack", 1},
+        {"high-tech-science-pack", 1},
       },
       time = 60
     },
@@ -35,6 +36,7 @@ data:extend(
     type = "technology",
     name = "cm-worker-robots-speed-7",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
+    icon_size = 128,
     effects = {
       {
         type = "worker-robot-speed",
@@ -50,7 +52,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1},
-		{"high-tech-science-pack", 1},
+        {"high-tech-science-pack", 1},
       },
       time = 60
     },
@@ -61,6 +63,7 @@ data:extend(
     type = "technology",
     name = "cm-worker-robots-speed-8",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
+    icon_size = 128,
     effects = {
       {
         type = "worker-robot-speed",
@@ -76,7 +79,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1},
-		{"high-tech-science-pack", 1},
+        {"high-tech-science-pack", 1},
       },
       time = 60
     },
@@ -87,6 +90,7 @@ data:extend(
     type = "technology",
     name = "cm-worker-robots-speed-9",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
+    icon_size = 128,
     effects = {
       {
         type = "worker-robot-speed",
@@ -102,7 +106,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1},
-		{"high-tech-science-pack", 1},
+        {"high-tech-science-pack", 1},
       },
       time = 60
     },
@@ -113,6 +117,7 @@ data:extend(
     type = "technology",
     name = "cm-worker-robots-speed-10",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
+    icon_size = 128,
     effects = {
       {
         type = "worker-robot-speed",
@@ -128,7 +133,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1},
-		{"high-tech-science-pack", 1},
+        {"high-tech-science-pack", 1},
       },
       time = 60
     },
@@ -139,6 +144,7 @@ data:extend(
     type = "technology",
     name = "cm-worker-robots-speed-11",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
+    icon_size = 128,
     effects = {
       {
         type = "worker-robot-speed",
@@ -154,7 +160,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1},
-		{"high-tech-science-pack", 1},
+        {"high-tech-science-pack", 1},
       },
       time = 60
     },
@@ -165,6 +171,7 @@ data:extend(
     type = "technology",
     name = "cm-worker-robots-speed-12",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
+    icon_size = 128,
     effects = {
       {
         type = "worker-robot-speed",
@@ -180,7 +187,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1},
-		{"high-tech-science-pack", 1},
+        {"high-tech-science-pack", 1},
       },
       time = 60
     },
@@ -191,6 +198,7 @@ data:extend(
     type = "technology",
     name = "cm-worker-robots-speed-13",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
+    icon_size = 128,
     effects = {
       {
         type = "worker-robot-speed",
@@ -206,7 +214,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1},
-		{"high-tech-science-pack", 1},
+        {"high-tech-science-pack", 1},
       },
       time = 60
     },
@@ -217,6 +225,7 @@ data:extend(
     type = "technology",
     name = "cm-worker-robots-speed-14",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
+    icon_size = 128,
     effects = {
       {
         type = "worker-robot-speed",
@@ -232,7 +241,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1},
-		{"high-tech-science-pack", 1},
+        {"high-tech-science-pack", 1},
       },
       time = 60
     },
@@ -243,6 +252,7 @@ data:extend(
     type = "technology",
     name = "cm-worker-robots-speed-15",
     icon = "__base__/graphics/technology/worker-robots-speed.png",
+    icon_size = 128,
     effects = {
       {
         type = "worker-robot-speed",
@@ -258,7 +268,7 @@ data:extend(
         {"science-pack-1", 1},
         {"science-pack-2", 1},
         {"science-pack-3", 1},
-		{"high-tech-science-pack", 1},
+        {"high-tech-science-pack", 1},
       },
       time = 60
     },

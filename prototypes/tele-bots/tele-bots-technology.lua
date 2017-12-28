@@ -3,6 +3,7 @@ data:extend({
     type = "technology",
     name = "cm-robots-3",
     icon = "__CMod__/graphics/icons/icon-cm-roboport3.png",
+    icon_size = 32,
     effects =
     {
       {

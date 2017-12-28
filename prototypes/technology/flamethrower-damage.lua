@@ -10,6 +10,7 @@ data:extend(
     type = "technology",
     name = "cm-flamethrower-damage-7",
     icon = "__base__/graphics/technology/flamethrower-turret-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -43,6 +44,7 @@ data:extend(
     type = "technology",
     name = "cm-flamethrower-damage-8",
     icon = "__base__/graphics/technology/flamethrower-turret-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -76,6 +78,7 @@ data:extend(
     type = "technology",
     name = "cm-flamethrower-damage-9",
     icon = "__base__/graphics/technology/flamethrower-turret-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -109,6 +112,7 @@ data:extend(
     type = "technology",
     name = "cm-flamethrower-damage-10",
     icon = "__base__/graphics/technology/flamethrower-turret-damage.png",
+    icon_size = 128,
     effects =
     {
       {

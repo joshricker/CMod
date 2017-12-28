@@ -3,6 +3,7 @@ data:extend({
     type = "technology",
     name = "cm-loader",
     icon = "__base__/graphics/technology/logistics.png",
+    icon_size = 128,
     upgrade = true,
     order = "c-k-f-b",
     effects =
@@ -30,6 +31,7 @@ data:extend({
     type = "technology",
     name = "cm-loader-2",
     icon = "__base__/graphics/technology/logistics.png",
+    icon_size = 128,
     upgrade = true,
     order = "c-k-f-b",
     effects =
@@ -59,6 +61,7 @@ data:extend({
     type = "technology",
     name = "cm-loader-3",
     icon = "__base__/graphics/technology/logistics.png",
+    icon_size = 128,
     upgrade = true,
     order = "c-k-f-b",
     effects =

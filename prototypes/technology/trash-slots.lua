@@ -3,6 +3,7 @@ data:extend({
     type = "technology",
     name = "cm-character-logistic-trash-slots-3",
     icon = "__base__/graphics/technology/character-logistic-trash-slots.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -29,6 +30,7 @@ data:extend({
     type = "technology",
     name = "cm-character-logistic-trash-slots-4",
     icon = "__base__/graphics/technology/character-logistic-trash-slots.png",
+    icon_size = 128,
     effects =
     {
       {

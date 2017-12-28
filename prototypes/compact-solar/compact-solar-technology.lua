@@ -4,6 +4,7 @@ data:extend(
     type = "technology",
     name = "cm-advanced-accumulators",
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -28,6 +29,7 @@ data:extend(
     type = "technology",
     name = "cm-advanced-solar",
     icon = "__base__/graphics/technology/solar-energy.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -53,6 +55,7 @@ data:extend(
     type = "technology",
     name = "cm-elite-accumulators",
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -78,6 +81,7 @@ data:extend(
     type = "technology",
     name = "cm-elite-solar",
     icon = "__base__/graphics/technology/solar-energy.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -103,6 +107,7 @@ data:extend(
     type = "technology",
     name = "cm-ultimate-accumulators",
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -129,6 +134,7 @@ data:extend(
     type = "technology",
     name = "cm-ultimate-solar",
     icon = "__base__/graphics/technology/solar-energy.png",
+    icon_size = 128,
     effects =
     {
       {

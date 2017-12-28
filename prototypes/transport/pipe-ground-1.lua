@@ -4,6 +4,7 @@ data:extend({
     type = "pipe-to-ground",
     name = "pipe-to-ground",
     icon = "__base__/graphics/icons/pipe-to-ground.png",
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {hardness = 0.2, mining_time = 0.5, result = "pipe-to-ground"},
     max_health = 150,

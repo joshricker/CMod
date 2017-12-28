@@ -2,27 +2,39 @@ data:extend(
 {
   {
     type = "equipment-category",
-    name = "train"
+    name = "vehicle"
+  },
+  {
+    type = "equipment-category",
+    name = "farl-equipment"
+  },
+  {
+    type = "equipment-grid",
+    name = "vehicle-large-equipment-grid",
+    width = 12,
+    height = 12,
+    equipment_categories = {"armor", "vehicle", "farl-equipment"}
   },
   {
     type = "item-subgroup",
-    name = "cmod-train-equipment",
+    name = "cmod-vehicle-equipment",
     group = "combat",
     order = "z"
   },
   {
     type = "item",
-    name = "cmod-train-laser-defense-equipment",
-    icon = "__CMod__/graphics/icons/train-laser-defense-equipment.png",
-    placed_as_equipment_result = "cmod-train-laser-defense-equipment",
+    name = "cmod-vehicle-laser-defense-equipment",
+    icon = "__CMod__/graphics/icons/vehicle-laser-defense-equipment.png",
+    icon_size = 32,
+    placed_as_equipment_result = "cmod-vehicle-laser-defense-equipment",
     flags = {"goes-to-main-inventory"},
-    group = "combat", subgroup = "cmod-train-equipment",
+    group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "a",
     stack_size = 16
   },
   {
     type = "recipe",
-    name = "cmod-train-laser-defense-equipment",
+    name = "cmod-vehicle-laser-defense-equipment",
     enabled = "true",
     energy_required = 12,
     ingredients =
@@ -31,14 +43,14 @@ data:extend(
       {"steel-plate", 25},
       {"advanced-circuit", 15}
     },
-    result = "cmod-train-laser-defense-equipment"
+    result = "cmod-vehicle-laser-defense-equipment"
   },
   {
     type = "active-defense-equipment",
-    name = "cmod-train-laser-defense-equipment",
+    name = "cmod-vehicle-laser-defense-equipment",
     sprite = 
     {
-      filename = "__CMod__/graphics/equipment/train-laser-defense-equipment.png",
+      filename = "__CMod__/graphics/equipment/vehicle-laser-defense-equipment.png",
       width = 64,
       height = 96,
       priority = "medium"
@@ -60,10 +72,10 @@ data:extend(
       type = "projectile",
       ammo_category = "electric",
       cooldown = 10,
-      damage_modifier = 40.0,
+      damage_modifier = 20.0,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 70,
+      range = 40,
       sound = make_laser_sounds(),
       ammo_type =
       {
@@ -88,38 +100,39 @@ data:extend(
         }
       }
     },
-	categories = {"train"},
+    categories = {"vehicle"},
     automatic = true
   },
   {
     type = "item",
-    name = "cmod-train-laser-defense-equipment-mk2",
-    icon = "__CMod__/graphics/icons/train-laser-defense-equipment-mk2.png",
-    placed_as_equipment_result = "cmod-train-laser-defense-equipment-mk2",
+    name = "cmod-vehicle-laser-defense-equipment-mk2",
+    icon = "__CMod__/graphics/icons/vehicle-laser-defense-equipment-mk2.png",
+    icon_size = 32,
+    placed_as_equipment_result = "cmod-vehicle-laser-defense-equipment-mk2",
     flags = {"goes-to-main-inventory"},
-    group = "combat", subgroup = "cmod-train-equipment",
+    group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "b",
     stack_size = 16
   },
   {
     type = "recipe",
-    name = "cmod-train-laser-defense-equipment-mk2",
+    name = "cmod-vehicle-laser-defense-equipment-mk2",
     enabled = "true",
     energy_required = 12,
     ingredients =
     {
-      {"cmod-train-laser-defense-equipment", 4},
+      {"cmod-vehicle-laser-defense-equipment", 2},
       {"effectivity-module-2", 25},
       {"productivity-module-2", 25}
     },
-    result = "cmod-train-laser-defense-equipment-mk2"
+    result = "cmod-vehicle-laser-defense-equipment-mk2"
   },
   {
     type = "active-defense-equipment",
-    name = "cmod-train-laser-defense-equipment-mk2",
+    name = "cmod-vehicle-laser-defense-equipment-mk2",
     sprite = 
     {
-      filename = "__CMod__/graphics/equipment/train-laser-defense-equipment-mk2.png",
+      filename = "__CMod__/graphics/equipment/vehicle-laser-defense-equipment-mk2.png",
       width = 64,
       height = 96,
       priority = "medium"
@@ -141,10 +154,10 @@ data:extend(
       type = "projectile",
       ammo_category = "electric",
       cooldown = 5,
-      damage_modifier = 60.0,
+      damage_modifier = 30.0,
       projectile_center = {0, 0},
       projectile_creation_distance = 0.6,
-      range = 85,
+      range = 55,
       sound = make_laser_sounds(),
       ammo_type =
       {
@@ -169,22 +182,23 @@ data:extend(
         }
       }
     },
-	categories = {"train"},
+    categories = {"vehicle"},
     automatic = true
   },
   {
     type = "item",
-    name = "cmod-train-fusion-reactor-equipment",
-    icon = "__CMod__/graphics/icons/train-fusion-reactor-equipment.png",
-    placed_as_equipment_result = "cmod-train-fusion-reactor-equipment",
+    name = "cmod-vehicle-fusion-reactor-equipment",
+    icon = "__CMod__/graphics/icons/vehicle-fusion-reactor-equipment.png",
+    icon_size = 32,
+    placed_as_equipment_result = "cmod-vehicle-fusion-reactor-equipment",
     flags = {"goes-to-main-inventory"},
-    group = "combat", subgroup = "cmod-train-equipment",
+    group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "h",
     stack_size = 16
   },
   {
     type = "recipe",
-    name = "cmod-train-fusion-reactor-equipment",
+    name = "cmod-vehicle-fusion-reactor-equipment",
     enabled = "true",
     energy_required = 15,
     ingredients =
@@ -192,14 +206,14 @@ data:extend(
       {"steel-plate", 75},
       {"advanced-circuit", 200}
     },
-    result = "cmod-train-fusion-reactor-equipment"
+    result = "cmod-vehicle-fusion-reactor-equipment"
   },
   {
     type = "generator-equipment",
-    name = "cmod-train-fusion-reactor-equipment",
+    name = "cmod-vehicle-fusion-reactor-equipment",
     sprite = 
     {
-      filename = "__CMod__/graphics/equipment/train-fusion-reactor-equipment.png",
+      filename = "__CMod__/graphics/equipment/vehicle-fusion-reactor-equipment.png",
       width = 128,
       height = 128,
       priority = "medium"
@@ -215,38 +229,39 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-	categories = {"train"},
+    categories = {"vehicle"},
     power = "7000KW"
   },
     {
     type = "item",
-    name = "cmod-train-fusion-reactor-equipment-mk2",
-    icon = "__CMod__/graphics/icons/train-fusion-reactor-equipment-mk2.png",
-    placed_as_equipment_result = "cmod-train-fusion-reactor-equipment-mk2",
+    name = "cmod-vehicle-fusion-reactor-equipment-mk2",
+    icon = "__CMod__/graphics/icons/vehicle-fusion-reactor-equipment-mk2.png",
+    icon_size = 32,
+    placed_as_equipment_result = "cmod-vehicle-fusion-reactor-equipment-mk2",
     flags = {"goes-to-main-inventory"},
-    group = "combat", subgroup = "cmod-train-equipment",
+    group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "i",
     stack_size = 16
   },
   {
     type = "recipe",
-    name = "cmod-train-fusion-reactor-equipment-mk2",
+    name = "cmod-vehicle-fusion-reactor-equipment-mk2",
     enabled = "true",
     energy_required = 15,
     ingredients =
     {
-      {"cmod-train-fusion-reactor-equipment", 4},
-      {"productivity-module-3", 10},
+      {"cmod-vehicle-fusion-reactor-equipment", 2},
+      {"productivity-module-2", 10},
       {"advanced-circuit", 250}
     },
-    result = "cmod-train-fusion-reactor-equipment-mk2"
+    result = "cmod-vehicle-fusion-reactor-equipment-mk2"
   },
   {
     type = "generator-equipment",
-    name = "cmod-train-fusion-reactor-equipment-mk2",
+    name = "cmod-vehicle-fusion-reactor-equipment-mk2",
     sprite = 
     {
-      filename = "__CMod__/graphics/equipment/train-fusion-reactor-equipment-mk2.png",
+      filename = "__CMod__/graphics/equipment/vehicle-fusion-reactor-equipment-mk2.png",
       width = 128,
       height = 128,
       priority = "medium"
@@ -262,22 +277,23 @@ data:extend(
       type = "electric",
       usage_priority = "primary-output"
     },
-	categories = {"train"},
+    categories = {"vehicle"},
     power = "20000KW"
   },
   {
     type = "item",
-    name = "cmod-train-energy-shield-equipment",
-    icon = "__CMod__/graphics/icons/train-energy-sheild-equipment.png",
-    placed_as_equipment_result = "cmod-train-energy-shield-equipment",
+    name = "cmod-vehicle-energy-shield-equipment",
+    icon = "__CMod__/graphics/icons/vehicle-energy-sheild-equipment.png",
+    icon_size = 32,
+    placed_as_equipment_result = "cmod-vehicle-energy-shield-equipment",
     flags = {"goes-to-main-inventory"},
-    group = "combat", subgroup = "cmod-train-equipment",
+    group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "n",
     stack_size = 16
   },
   {
     type = "recipe",
-    name = "CMod-train-energy-shield-equipment",
+    name = "CMod-vehicle-energy-shield-equipment",
     enabled = "true",
     energy_required = 12,
     ingredients =
@@ -285,14 +301,14 @@ data:extend(
       {"energy-shield-equipment", 1},
       {"advanced-circuit", 15}
     },
-    result = "cmod-train-energy-shield-equipment"
+    result = "cmod-vehicle-energy-shield-equipment"
   },
   {
     type = "energy-shield-equipment",
-    name = "cmod-train-energy-shield-equipment",
+    name = "cmod-vehicle-energy-shield-equipment",
     sprite = 
     {
-      filename = "__CMod__/graphics/equipment/train-energy-sheild-equipment.png",
+      filename = "__CMod__/graphics/equipment/vehicle-energy-sheild-equipment.png",
       width = 64,
       height = 64,
       priority = "medium"
@@ -311,38 +327,39 @@ data:extend(
       input_flow_limit = "5040KW",
       usage_priority = "primary-input"
     },
-	categories = {"armor"},
+    categories = {"vehicle"},
     energy_per_shield = "30KJ"
   },
    {
     type = "item",
-    name = "cmod-train-energy-shield-equipment-mk2",
-    icon = "__CMod__/graphics/icons/train-energy-shield-equipment-mk2.png",
-    placed_as_equipment_result = "cmod-train-energy-shield-equipment-mk2",
+    name = "cmod-vehicle-energy-shield-equipment-mk2",
+    icon = "__CMod__/graphics/icons/vehicle-energy-shield-equipment-mk2.png",
+    icon_size = 32,
+    placed_as_equipment_result = "cmod-vehicle-energy-shield-equipment-mk2",
     flags = {"goes-to-main-inventory"},
-    group = "combat", subgroup = "cmod-train-equipment",
+    group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "o",
     stack_size = 16
   },
   {
     type = "recipe",
-    name = "CMod-train-energy-shield-equipment-mk2",
+    name = "CMod-vehicle-energy-shield-equipment-mk2",
     enabled = "true",
     energy_required = 12,
     ingredients =
     {
-      {"cmod-train-energy-shield-equipment", 4},
+      {"cmod-vehicle-energy-shield-equipment", 2},
       {"effectivity-module-2", 40},
       {"productivity-module-2", 40}
     },
-    result = "cmod-train-energy-shield-equipment-mk2"
+    result = "cmod-vehicle-energy-shield-equipment-mk2"
   },
   {
     type = "energy-shield-equipment",
-    name = "cmod-train-energy-shield-equipment-mk2",
+    name = "cmod-vehicle-energy-shield-equipment-mk2",
     sprite = 
     {
-      filename = "__CMod__/graphics/equipment/train-energy-shield-equipment-mk2.png",
+      filename = "__CMod__/graphics/equipment/vehicle-energy-shield-equipment-mk2.png",
       width = 64,
       height = 64,
       priority = "medium"
@@ -361,22 +378,23 @@ data:extend(
       input_flow_limit = "15000KW",
       usage_priority = "primary-input"
     },
-	categories = {"armor"},
+    categories = {"vehicle"},
     energy_per_shield = "30KJ"
   },
   {
     type = "item",
-    name = "cmod-train-battery-equipment",
-    icon = "__CMod__/graphics/icons/train-battery-equipment.png",
-    placed_as_equipment_result = "cmod-train-battery-equipment",
+    name = "cmod-vehicle-battery-equipment",
+    icon = "__CMod__/graphics/icons/vehicle-battery-equipment.png",
+    icon_size = 32,
+    placed_as_equipment_result = "cmod-vehicle-battery-equipment",
     flags = {"goes-to-main-inventory"},
-    group = "combat", subgroup = "cmod-train-equipment",
+    group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "q",
     stack_size = 16
   },
   {
     type = "recipe",
-    name = "cmod-train-battery-equipment",
+    name = "cmod-vehicle-battery-equipment",
     enabled = "true",
     energy_required = 40,
     ingredients =
@@ -384,14 +402,14 @@ data:extend(
       {"battery-equipment", 1},
       {"advanced-circuit", 15}
     },
-    result = "cmod-train-battery-equipment"
+    result = "cmod-vehicle-battery-equipment"
   },
   {
     type = "battery-equipment",
-    name = "cmod-train-battery-equipment",
+    name = "cmod-vehicle-battery-equipment",
     sprite = 
     {
-      filename = "__CMod__/graphics/equipment/train-battery-equipment.png",
+      filename = "__CMod__/graphics/equipment/vehicle-battery-equipment.png",
       width = 32,
       height = 64,
       priority = "medium"
@@ -402,7 +420,7 @@ data:extend(
       height = 2,
       type = "full"
     },
-	categories = {"train"},
+    categories = {"vehicle"},
     energy_source =
     {
       type = "electric",
@@ -414,34 +432,35 @@ data:extend(
   },
   {
     type = "item",
-    name = "cmod-train-battery-equipment-mk2",
-    icon = "__CMod__/graphics/icons/train-battery-equipment-mk2.png",
-    placed_as_equipment_result = "cmod-train-battery-equipment-mk2",
+    name = "cmod-vehicle-battery-equipment-mk2",
+    icon = "__CMod__/graphics/icons/vehicle-battery-equipment-mk2.png",
+    icon_size = 32,
+    placed_as_equipment_result = "cmod-vehicle-battery-equipment-mk2",
     flags = {"goes-to-main-inventory"},
-    group = "combat", subgroup = "cmod-train-equipment",
+    group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "r",
     stack_size = 16
   },
   {
     type = "recipe",
-    name = "cmod-train-battery-equipment-mk2",
+    name = "cmod-vehicle-battery-equipment-mk2",
     enabled = "true",
     energy_required = 20,
     ingredients =
     {
-      {"cmod-train-battery-equipment", 4},
+      {"cmod-vehicle-battery-equipment", 2},
       {"productivity-module-2", 15},
       {"effectivity-module-2", 15},
       {"speed-module-2", 15}
     },
-    result = "cmod-train-battery-equipment-mk2"
+    result = "cmod-vehicle-battery-equipment-mk2"
   },
   {
     type = "battery-equipment",
-    name = "cmod-train-battery-equipment-mk2",
+    name = "cmod-vehicle-battery-equipment-mk2",
     sprite = 
     {
-      filename = "__CMod__/graphics/equipment/train-battery-equipment-mk2.png",
+      filename = "__CMod__/graphics/equipment/vehicle-battery-equipment-mk2.png",
       width = 32,
       height = 64,
       priority = "medium"
@@ -452,7 +471,7 @@ data:extend(
       height = 2,
       type = "full"
     },
-	categories = {"train"},
+    categories = {"vehicle"},
     energy_source =
     {
       type = "electric",

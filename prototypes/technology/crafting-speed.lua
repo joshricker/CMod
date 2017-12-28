@@ -3,6 +3,7 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-1",
     icon = "__base__/graphics/technology/research-speed.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -26,6 +27,7 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-2",
     icon = "__base__/graphics/technology/research-speed.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -51,6 +53,7 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-3",
     icon = "__base__/graphics/technology/research-speed.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -77,6 +80,7 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-4",
     icon = "__base__/graphics/technology/research-speed.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -104,6 +108,7 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-5",
     icon = "__base__/graphics/technology/research-speed.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -131,6 +136,7 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-6",
     icon = "__base__/graphics/technology/research-speed.png",
+    icon_size = 128,
     effects =
     {
       {

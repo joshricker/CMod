@@ -3,6 +3,7 @@ data:extend({
     type = "technology",
     name = "cm-laser-turret-damage-7",
     icon = "__base__/graphics/technology/laser-turret-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -31,6 +32,7 @@ data:extend({
     type = "technology",
     name = "cm-laser-turret-damage-8",
     icon = "__base__/graphics/technology/laser-turret-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -59,6 +61,7 @@ data:extend({
     type = "technology",
     name = "cm-laser-turret-damage-9",
     icon = "__base__/graphics/technology/laser-turret-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -87,6 +90,7 @@ data:extend({
     type = "technology",
     name = "cm-laser-turret-damage-10",
     icon = "__base__/graphics/technology/laser-turret-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -115,6 +119,7 @@ data:extend({
     type = "technology",
     name = "cm-laser-turret-damage-11",
     icon = "__base__/graphics/technology/laser-turret-damage.png",
+    icon_size = 128,
     effects =
     {
       {
@@ -143,6 +148,7 @@ data:extend({
     type = "technology",
     name = "cm-laser-turret-damage-12",
     icon = "__base__/graphics/technology/laser-turret-damage.png",
+    icon_size = 128,
     effects =
     {
       {
