@@ -7,11 +7,10 @@ require("prototypes.technology.crafting-speed")
 --require("prototypes.technology.laser-turret-damage")
 require("prototypes.technology.run-speed")
 require("prototypes.technology.trash-slots")
+require("prototypes.technology.tool-belts")
 --require("prototypes.technology.bullet-damage")
 require("prototypes.waterfill.waterfill")
 require("prototypes.energy-void.energy-void")
---require("prototypes.void-chest.void-chest")
-
 --transport
 require("prototypes.transport.pipe-1")
 require("prototypes.transport.pipe-ground-1")
@@ -25,7 +24,6 @@ require("prototypes.transport.transport-belt-ground-2-50")
 require("prototypes.transport.transport-belt-ground-3-50")
 require("prototypes.transport.tech")
 require("prototypes.groups.item-groups-transport")
-
 --Comp Solars and accumulators
 require("prototypes.compact-solar.advanced-accumulator")
 require("prototypes.compact-solar.elite-accumulator")
@@ -83,6 +81,7 @@ data.raw.player.player.build_distance = 4096
 data.raw.player.player.drop_item_distance = 4096
 data.raw.player.player.reach_distance = 4096
 data.raw.player.player.reach_resource_distance = 4096
+data.raw.item["sulfur"].stack_size = 200
 data.raw.item["uranium-ore"].stack_size = 200
 data.raw.item["iron-ore"].stack_size = 200
 data.raw.item["copper-ore"].stack_size = 200
@@ -101,11 +100,13 @@ data.raw.item["landfill"].stack_size = 10000
 data.raw.item["concrete"].stack_size = 1000
 data.raw["recipe"]["landfill"].result_count = 20
 data.raw["gun"]["tank-machine-gun"].attack_parameters = {type = "projectile",ammo_category = "bullet",cooldown = 4,movement_slow_down_factor = 0.7,damage_modifier = 3,shell_particle = {name = "shell-particle",direction_deviation = 0.1,speed = 0.1,speed_deviation = 0.03,center = {0, 0},creation_distance = -0.6875,starting_frame_speed = 0.4,starting_frame_speed_deviation = 0.1},projectile_center = {-0.15625, -0.07812},projectile_creation_distance = 1,range = 35,sound = make_heavy_gunshot_sounds()}
+data.raw["gun"]["artillery-wagon-cannon"]["attack_parameters"].range = 12 * 32
+data.raw["artillery-wagon"]["artillery-wagon"].max_speed = 4
 data.raw["technology"]["logistic-system"]["unit"]["ingredients"] = {{"science-pack-1", 1},{"science-pack-2", 1},{"science-pack-3", 1}}
-data.raw["technology"]["artillery"]["ingredients"] = {{"science-pack-1", 1},{"science-pack-2", 1},{"science-pack-3", 1},{"military-science-pack", 1}}
-data.raw["technology"]["military-4"]["ingredients"] = {{"science-pack-1", 1},{"science-pack-2", 1},{"science-pack-3", 1},{"military-science-pack", 1}}
-data.raw["technology"]["tanks"]["ingredients"] = {{"science-pack-1", 1},{"science-pack-2", 1},{"military-science-pack", 1}}
-data.raw["technology"]["military-3"]["ingredients"] = {{"science-pack-1", 1},{"science-pack-2", 1},{"military-science-pack", 1}}
+data.raw["technology"]["artillery"]["unit"]["ingredients"] = {{"science-pack-1", 1},{"science-pack-2", 1},{"science-pack-3", 1},{"military-science-pack", 1}}
+data.raw["technology"]["military-4"]["unit"]["ingredients"] = {{"science-pack-1", 1},{"science-pack-2", 1},{"science-pack-3", 1},{"military-science-pack", 1}}
+data.raw["technology"]["tanks"]["unit"]["ingredients"] = {{"science-pack-1", 1},{"science-pack-2", 1},{"military-science-pack", 1}}
+data.raw["technology"]["military-3"]["unit"]["ingredients"] = {{"science-pack-1", 1},{"science-pack-2", 1},{"military-science-pack", 1}}
 
 data.raw["ammo"]["firearm-magazine"].magazine_size = 50
 data.raw["ammo"]["firearm-magazine"]["ammo_type"].action ={{type = "direct",action_delivery ={{type = "instant",source_effects ={{type = "create-explosion",entity_name = "explosion-gunshot"}},target_effects = {{ type = "create-entity",entity_name = "explosion-hit" }, {type = "damage",damage = { amount = 6,type = "physical"}}}}}}}
@@ -117,8 +118,8 @@ data.raw["ammo"]["artillery-shell"].stack_size = 100
 data.raw["boiler"]["heat-exchanger"].energy_consumption = "40MW"
 data.raw["generator"]["steam-turbine"].fluid_usage_per_tick = 4
 
-data.raw["fluid-wagon"]["fluid-wagon"].total_capacity = 300000
-data.raw["fluid-wagon"]["fluid-wagon"].weight = 4500
+data.raw["fluid-wagon"]["fluid-wagon"].capacity = 150000
+data.raw["fluid-wagon"]["fluid-wagon"].weight = 2000
 data.raw["fluid-wagon"]["fluid-wagon"].max_speed = 4
 data.raw["logistic-robot"]["logistic-robot"].speed = 0.18
 data.raw["logistic-robot"]["logistic-robot"].energy_per_tick = "0.01kJ"
@@ -248,6 +249,7 @@ if data.raw["assembling-machine"]["y-crusher"] then
     data.raw["recipe"]["y_mc_e2_mining_drill_recipe"].ingredients = {{"y-mining-drill-e2",1},{"y_rwtechsign",700},}
 
     data.raw["roboport"]["yi_roboport"].energy_source = {type = "electric",usage_priority = "secondary-input",input_flow_limit = "75MW",buffer_capacity = "800MJ"}
+    data.raw["recipe"]["yi_roboport_recipe"].ingredients = {{ type = "item", name = "y_structure_element" , amount = 14, },{ type = "item", name = "yi_magnetron" , amount = 2, },{ type = "item", name = "y_blocked_capa" , amount = 2, },{ type = "item", name = "y-basic-t1-mf" , amount = 2, },{ type = "item", name = "y_rwtechsign" , amount = 10, }}
     data.raw["logistic-robot"]["yi_logistic-robot"].max_payload_size = 10
     data.raw["logistic-robot"]["yi_logistic-robot"].speed = 0.50
     data.raw["logistic-robot"]["yi_logistic-robot"].energy_per_tick = "0.01kJ"
@@ -334,6 +336,16 @@ if data.raw["recipe"]["yir_coins_gen1_recipe"] then
     data.raw["locomotive"]["yir_atom_mitte"].max_speed = 4.0
     data.raw["locomotive"]["yir_atom_mitte"].braking_force = 40
     data.raw["locomotive"]["yir_atom_mitte"].equipment_grid = "vehicle-large-equipment-grid"
+    require("prototypes.4aw-cargowagons.4aw_ironore")
+    require("prototypes.4aw-cargowagons.4aw_copperore")
+    require("prototypes.4aw-cargowagons.4aw_stoneore")
+    require("prototypes.4aw-cargowagons.4aw_coalore")
+    require("prototypes.4aw-cargowagons.4aw_saphiriteore")
+    require("prototypes.4aw-cargowagons.4aw_jivoliteore")
+    require("prototypes.4aw-cargowagons.4aw_stiratiteore")
+    require("prototypes.4aw-cargowagons.4aw_crotinniumore")
+    require("prototypes.4aw-cargowagons.4aw_rubyteore")
+    require("prototypes.4aw-cargowagons.4aw_bobmoniumore")
 end
 
 if data.raw["assembling-machine"]["ye_fassembly1"] then

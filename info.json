@@ -1,10 +1,10 @@
 {
   "name": "CMod",
-  "version": "0.2.07",
+  "version": "0.3.01",
   "title": "CMod",
   "author": "Codec",
-  "homepage": "",
+  "homepage": "aiminecraft.com",
   "factorio_version": "0.16",
   "dependencies": ["base", "? Yuoki >= 0.2.40", "? yi_railway","? z_yira_UP", "? yi_engines", "? bobplates", "? bobelectronics", "? bobgreenhouse", "? angelspetrochem", "? Helicopters"],
-  "description": "Some QoL changes."
+  "description": "Uh ya, about that."
 }
