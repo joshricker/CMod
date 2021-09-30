@@ -10,7 +10,7 @@ data:extend(
     type = "technology",
     name = "cm-flamethrower-damage-7",
     icon = "__base__/graphics/technology/flamethrower-turret-damage.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -31,9 +31,9 @@ data:extend(
       ingredients =
       {
         {"military-science-pack", 2},
-        {"science-pack-1", 2},
-        {"science-pack-2", 2},
-        {"science-pack-3", 2}
+        {"automation-science-pack", 2},
+        {"logistic-science-pack", 2},
+        {"chemical-science-pack", 2}
       },
       time = 80
     },
@@ -44,7 +44,7 @@ data:extend(
     type = "technology",
     name = "cm-flamethrower-damage-8",
     icon = "__base__/graphics/technology/flamethrower-turret-damage.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -65,9 +65,9 @@ data:extend(
       ingredients =
       {
         {"military-science-pack", 2},
-        {"science-pack-1", 2},
-        {"science-pack-2", 2},
-        {"science-pack-3", 2}
+        {"automation-science-pack", 2},
+        {"logistic-science-pack", 2},
+        {"chemical-science-pack", 2}
       },
       time = 80
     },
@@ -78,7 +78,7 @@ data:extend(
     type = "technology",
     name = "cm-flamethrower-damage-9",
     icon = "__base__/graphics/technology/flamethrower-turret-damage.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -99,9 +99,9 @@ data:extend(
       ingredients =
       {
         {"military-science-pack", 2},
-        {"science-pack-1", 2},
-        {"science-pack-2", 2},
-        {"science-pack-3", 2}
+        {"automation-science-pack", 2},
+        {"logistic-science-pack", 2},
+        {"chemical-science-pack", 2}
       },
       time = 80
     },
@@ -112,7 +112,7 @@ data:extend(
     type = "technology",
     name = "cm-flamethrower-damage-10",
     icon = "__base__/graphics/technology/flamethrower-turret-damage.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -133,9 +133,9 @@ data:extend(
       ingredients =
       {
         {"military-science-pack", 5},
-        {"science-pack-1", 5},
-        {"science-pack-2", 5},
-        {"science-pack-3", 5}
+        {"automation-science-pack", 5},
+        {"logistic-science-pack", 5},
+        {"chemical-science-pack", 5}
       },
       time = 80
     },

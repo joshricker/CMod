@@ -5,7 +5,7 @@ data:extend({
     name = "cm-pipe-to-ground-mk1-30",
     icon = "__CMod__/graphics/icons/pipe/icon_cm_pipe-to-underground_1_30_.png",
     icon_size = 32,
-    flags = {"goes-to-quickbar"},
+
     subgroup = "transport-pipe-ground-30",
     order = "a[basic-pipe-ground]",
     place_result = "cm-pipe-to-ground-mk1-30",

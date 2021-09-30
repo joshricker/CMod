@@ -4,10 +4,9 @@ data:extend({
     name = "cm-waterfill",
     icon = "__CMod__/graphics/icons/water.png",
     icon_size = 32,
-    flags = {"goes-to-main-inventory"},
     subgroup = "terrain",
     order = "c[landfill]-a[dirt]",
-    stack_size = 1000,
+    stack_size = 10000,
     place_as_tile =
     {
       result = "water",
@@ -19,7 +18,7 @@ data:extend({
     type = "recipe",
     name = "cm-waterfill",
     energy_required = 1,
-    enabled = false,
+    enabled = true,
     category = "crafting-with-fluid",
     ingredients =
     {
@@ -27,30 +26,5 @@ data:extend({
     },
     result= "cm-waterfill",
     result_count = 1
-  },
-   {
-    type = "technology",
-    name = "cm-waterfill",
-    icon = "__CMod__/graphics/icons/water.png",
-    icon_size = 32,
-    prerequisites = {"landfill"},
-    unit =
-    {
-      count = 50,
-      ingredients =
-      {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-      },
-      time = 25
-    },
-    effects =
-    {
-      {
-        type = "unlock-recipe",
-        recipe = "cm-waterfill"
-      }
-    },
-    order = "b-d"
   }
-  })
+})

@@ -4,7 +4,7 @@ data:extend({
     name = "transport",
     order = "gd",
     inventory_order = "gd",
-	icon_size = 64,
+    icon_size = 64,
     icon = "__CMod__/graphics/icons/transport.png",
   },
   {
@@ -12,12 +12,6 @@ data:extend({
     name = "transport-belt",
     group = "transport",
     order = "aa"
-  },
-  {
-    type = "item-subgroup",
-    name = "transport-loader",
-    group = "transport",
-    order = "ab"
   },
   {
     type = "item-subgroup",
@@ -45,9 +39,21 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "transport-tank",
+    name = "transport-dl-beltbox",
     group = "transport",
     order = "f"
+  },
+  {
+    type = "item-subgroup",
+    name = "transport-dl-loader",
+    group = "transport",
+    order = "fa"
+  },
+  {
+    type = "item-subgroup",
+    name = "transport-loader",
+    group = "transport",
+    order = "fb"
   },
   {
     type = "item-subgroup",
@@ -79,27 +85,12 @@ data:extend({
     group = "transport",
     order = "k"
   },
+  {
+    type = "item-subgroup",
+    name = "transport-void",
+    group = "transport",
+    order = "l"
+  },
 })
 
-data.raw.item["splitter"].subgroup = "transport-splitters"
-data.raw.item["fast-splitter"].subgroup = "transport-splitters"
-data.raw.item["express-splitter"].subgroup = "transport-splitters"
-data.raw.item["transport-belt"].subgroup = "transport-belt"
-data.raw.item["fast-transport-belt"].subgroup = "transport-belt"
-data.raw.item["express-transport-belt"].subgroup = "transport-belt"
-data.raw.item["underground-belt"].subgroup = "transport-ground"
-data.raw.item["fast-underground-belt"].subgroup = "transport-ground"
-data.raw.item["express-underground-belt"].subgroup = "transport-ground"
-data.raw.item["pipe"].subgroup = "transport-pipe"
-data.raw.item["pipe-to-ground"].subgroup = "transport-pipe-ground"
-data.raw.item["splitter"].order = "a"
-data.raw.item["fast-splitter"].order = "b"
-data.raw.item["express-splitter"].order = "c"
-data.raw.item["transport-belt"].order = "a"
-data.raw.item["fast-transport-belt"].order = "b"
-data.raw.item["express-transport-belt"].order = "c"
-data.raw.item["underground-belt"].order = "a"
-data.raw.item["fast-underground-belt"].order = "b"
-data.raw.item["express-underground-belt"].order = "c"
-data.raw.item["pipe"].order = "a"
-data.raw.item["pipe-to-ground"].order = "a"
+

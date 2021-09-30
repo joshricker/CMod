@@ -4,7 +4,7 @@ data:extend(
         type = "technology",
         name = "cm-worker-robots-storage-4",
         icon = "__base__/graphics/technology/worker-robots-storage.png",
-        icon_size = 128,
+        icon_size = 256,
         effects = {
           {
             type = "worker-robot-storage",
@@ -17,10 +17,10 @@ data:extend(
         unit = {
           count = 500,
           ingredients = {
-            {"high-tech-science-pack", 1},
-            {"science-pack-1", 1},
-            {"science-pack-2", 1},
-            {"science-pack-3", 1}
+            {"utility-science-pack", 1},
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1}
           },
           time = 60
         },
@@ -31,7 +31,7 @@ data:extend(
         type = "technology",
         name = "cm-worker-robots-storage-5",
         icon = "__base__/graphics/technology/worker-robots-storage.png",
-        icon_size = 128,
+        icon_size = 256,
         effects = {
           {
             type = "worker-robot-storage",
@@ -44,10 +44,10 @@ data:extend(
         unit = {
           count = 550,
           ingredients = {
-            {"high-tech-science-pack", 1},
-            {"science-pack-1", 1},
-            {"science-pack-2", 1},
-            {"science-pack-3", 1}
+            {"utility-science-pack", 1},
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1}
           },
           time = 60
         },
@@ -58,7 +58,7 @@ data:extend(
         type = "technology",
         name = "cm-worker-robots-storage-6",
         icon = "__base__/graphics/technology/worker-robots-storage.png",
-        icon_size = 128,
+        icon_size = 256,
         effects = {
           {
             type = "worker-robot-storage",
@@ -71,10 +71,10 @@ data:extend(
         unit = {
           count = 600,
           ingredients = {
-            {"high-tech-science-pack", 1},
-            {"science-pack-1", 1},
-            {"science-pack-2", 1},
-            {"science-pack-3", 1}
+            {"utility-science-pack", 1},
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1}
           },
           time = 60
         },
@@ -85,7 +85,7 @@ data:extend(
         type = "technology",
         name = "cm-worker-robots-storage-7",
         icon = "__base__/graphics/technology/worker-robots-storage.png",
-        icon_size = 128,
+        icon_size = 256,
         effects = {
           {
             type = "worker-robot-storage",
@@ -98,10 +98,10 @@ data:extend(
         unit = {
           count = 700,
           ingredients = {
-            {"high-tech-science-pack", 1},
-            {"science-pack-1", 1},
-            {"science-pack-2", 1},
-            {"science-pack-3", 1}
+            {"utility-science-pack", 1},
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1}
           },
           time = 70
         },
@@ -112,7 +112,7 @@ data:extend(
         type = "technology",
         name = "cm-worker-robots-storage-8",
         icon = "__base__/graphics/technology/worker-robots-storage.png",
-        icon_size = 128,
+        icon_size = 256,
         effects = {
           {
             type = "worker-robot-storage",
@@ -125,10 +125,10 @@ data:extend(
         unit = {
           count = 800,
           ingredients = {
-            {"high-tech-science-pack", 1},
-            {"science-pack-1", 1},
-            {"science-pack-2", 1},
-            {"science-pack-3", 1}
+            {"utility-science-pack", 1},
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1}
           },
           time = 80
         },
@@ -139,7 +139,7 @@ data:extend(
         type = "technology",
         name = "cm-worker-robots-storage-9",
         icon = "__base__/graphics/technology/worker-robots-storage.png",
-        icon_size = 128,
+        icon_size = 256,
         effects = {
           {
             type = "worker-robot-storage",
@@ -152,10 +152,10 @@ data:extend(
         unit = {
           count = 900,
           ingredients = {
-            {"high-tech-science-pack", 1},
-            {"science-pack-1", 1},
-            {"science-pack-2", 1},
-            {"science-pack-3", 1}
+            {"utility-science-pack", 1},
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1}
           },
           time = 90
         },
@@ -166,7 +166,7 @@ data:extend(
         type = "technology",
         name = "cm-worker-robots-storage-10",
         icon = "__base__/graphics/technology/worker-robots-storage.png",
-        icon_size = 128,
+        icon_size = 256,
         effects = {
           {
             type = "worker-robot-storage",
@@ -179,10 +179,10 @@ data:extend(
         unit = {
           count = 2000,
           ingredients = {
-            {"high-tech-science-pack", 1},
-            {"science-pack-1", 1},
-            {"science-pack-2", 1},
-            {"science-pack-3", 1}
+            {"utility-science-pack", 1},
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1}
           },
           time = 90
         },
@@ -193,7 +193,7 @@ data:extend(
         type = "technology",
         name = "cm-worker-robots-storage-11",
         icon = "__base__/graphics/technology/worker-robots-storage.png",
-        icon_size = 128,
+        icon_size = 256,
         effects = {
           {
             type = "worker-robot-storage",
@@ -206,10 +206,10 @@ data:extend(
         unit = {
           count = 4000,
           ingredients = {
-            {"high-tech-science-pack", 1},
-            {"science-pack-1", 1},
-            {"science-pack-2", 1},
-            {"science-pack-3", 1}
+            {"utility-science-pack", 1},
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1}
           },
           time = 90
         },

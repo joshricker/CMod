@@ -4,7 +4,7 @@ data:extend(
     type = "technology",
     name = "cm-advanced-accumulators",
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -18,8 +18,8 @@ data:extend(
       count = 150,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1}
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1}
       },
       time = 45
     },
@@ -29,7 +29,7 @@ data:extend(
     type = "technology",
     name = "cm-advanced-solar",
     icon = "__base__/graphics/technology/solar-energy.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -43,9 +43,9 @@ data:extend(
       count = 100,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1}
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 45
     },
@@ -55,7 +55,7 @@ data:extend(
     type = "technology",
     name = "cm-elite-accumulators",
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -69,9 +69,9 @@ data:extend(
       count = 150,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1}
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 45
     },
@@ -81,7 +81,7 @@ data:extend(
     type = "technology",
     name = "cm-elite-solar",
     icon = "__base__/graphics/technology/solar-energy.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -95,9 +95,9 @@ data:extend(
       count = 200,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1}
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 45
     },
@@ -107,7 +107,7 @@ data:extend(
     type = "technology",
     name = "cm-ultimate-accumulators",
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -121,10 +121,10 @@ data:extend(
       count = 200,
       ingredients =
       {
-        {"science-pack-1", 2},
-        {"science-pack-2", 2},
-        {"science-pack-3", 1},
-        {"high-tech-science-pack", 1}
+        {"automation-science-pack", 2},
+        {"logistic-science-pack", 2},
+        {"chemical-science-pack", 1},
+        {"utility-science-pack", 1}
       },
       time = 60
     },
@@ -134,7 +134,7 @@ data:extend(
     type = "technology",
     name = "cm-ultimate-solar",
     icon = "__base__/graphics/technology/solar-energy.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -148,10 +148,10 @@ data:extend(
       count = 250,
       ingredients =
       {
-        {"science-pack-1", 2},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
-        {"high-tech-science-pack", 1}
+        {"automation-science-pack", 2},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"utility-science-pack", 1}
       },
       time = 60
     },

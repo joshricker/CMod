@@ -3,12 +3,12 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-1",
     icon = "__base__/graphics/technology/research-speed.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
         type = "character-crafting-speed",
-        modifier = "1"
+        modifier = "2"
       }
     },
     unit =
@@ -16,7 +16,7 @@ data:extend({
       count = 20,
       ingredients =
       {
-        {"science-pack-1", 1}
+        {"automation-science-pack", 1}
       },
       time = 10
     },
@@ -27,12 +27,12 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-2",
     icon = "__base__/graphics/technology/research-speed.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
         type = "character-crafting-speed",
-        modifier = "1"
+        modifier = "2"
       }
     },
     prerequisites = {"cm-crafting-speed-1"},
@@ -41,8 +41,8 @@ data:extend({
       count = 50,
       ingredients =
       {
-        {"science-pack-1", 1},
-		{"science-pack-2", 1}
+        {"automation-science-pack", 1},
+		{"logistic-science-pack", 1}
       },
       time = 20
     },
@@ -53,12 +53,12 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-3",
     icon = "__base__/graphics/technology/research-speed.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
         type = "character-crafting-speed",
-        modifier = "1"
+        modifier = "2"
       }
     },
     prerequisites = {"cm-crafting-speed-2"},
@@ -67,9 +67,9 @@ data:extend({
       count = 100,
       ingredients =
       {
-        {"science-pack-1", 1},
-		{"science-pack-2", 1},
-		{"science-pack-3", 1}
+        {"automation-science-pack", 1},
+		{"logistic-science-pack", 1},
+		{"chemical-science-pack", 1}
       },
       time = 30
     },
@@ -80,12 +80,12 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-4",
     icon = "__base__/graphics/technology/research-speed.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
         type = "character-crafting-speed",
-        modifier = "1"
+        modifier = "2"
       }
     },
     prerequisites = {"cm-crafting-speed-3"},
@@ -94,9 +94,9 @@ data:extend({
       count = 250,
       ingredients =
       {
-        {"science-pack-1", 1},
-		{"science-pack-2", 1},
-		{"science-pack-3", 1},
+        {"automation-science-pack", 1},
+		{"logistic-science-pack", 1},
+		{"chemical-science-pack", 1},
 		{"production-science-pack", 1}
       },
       time = 60
@@ -108,12 +108,12 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-5",
     icon = "__base__/graphics/technology/research-speed.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
         type = "character-crafting-speed",
-        modifier = "1"
+        modifier = "2"
       }
     },
     prerequisites = {"cm-crafting-speed-4"},
@@ -122,9 +122,9 @@ data:extend({
       count = 450,
       ingredients =
       {
-        {"science-pack-1", 1},
-		{"science-pack-2", 1},
-		{"science-pack-3", 1},
+        {"automation-science-pack", 1},
+		{"logistic-science-pack", 1},
+		{"chemical-science-pack", 1},
 		{"production-science-pack", 1}
       },
       time = 60
@@ -136,12 +136,12 @@ data:extend({
     type = "technology",
     name = "cm-crafting-speed-6",
     icon = "__base__/graphics/technology/research-speed.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
         type = "character-crafting-speed",
-        modifier = "1"
+        modifier = "4"
       }
     },
     prerequisites = {"cm-crafting-speed-5"},
@@ -150,9 +150,9 @@ data:extend({
       count = 1250,
       ingredients =
       {
-        {"science-pack-1", 2},
-		{"science-pack-2", 2},
-		{"science-pack-3", 2},
+        {"automation-science-pack", 2},
+		{"logistic-science-pack", 2},
+		{"chemical-science-pack", 2},
 		{"production-science-pack", 2}
       },
       time = 60

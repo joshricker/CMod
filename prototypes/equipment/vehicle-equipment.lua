@@ -9,11 +9,46 @@ data:extend(
     name = "farl-equipment"
   },
   {
+    type = "equipment-category",
+    name = "armoured-vehicle"
+  },
+  {
+    type = "equipment-category",
+    name = "tank"
+  },
+  {
+    type = "equipment-category",
+    name = "train"
+  },
+  {
+    type = "equipment-category",
+    name = "locomotive"
+  },
+  {
+    type = "equipment-category",
+    name = "armoured-train"
+  },
+  {
+    type = "equipment-category",
+    name = "armoured-locomotive"
+  },
+  {
+    type = "equipment-category",
+    name = "car"
+  },
+  {
     type = "equipment-grid",
     name = "vehicle-large-equipment-grid",
+    width = 15,
+    height = 15,
+    equipment_categories = {"car", "armor", "vehicle", "farl-equipment", "tank", "armoured-vehicle", "train", "locomotive", "armoured-train", "armoured-locomotive"}
+  },
+  {
+    type = "equipment-grid",
+    name = "vehicle-equipment-grid",
     width = 12,
     height = 12,
-    equipment_categories = {"armor", "vehicle", "farl-equipment"}
+    equipment_categories = {"car", "armor", "vehicle", "farl-equipment", "tank", "armoured-vehicle", "train", "locomotive", "armoured-train", "armoured-locomotive"}
   },
   {
     type = "item-subgroup",
@@ -27,7 +62,7 @@ data:extend(
     icon = "__CMod__/graphics/icons/vehicle-laser-defense-equipment.png",
     icon_size = 32,
     placed_as_equipment_result = "cmod-vehicle-laser-defense-equipment",
-    flags = {"goes-to-main-inventory"},
+
     group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "a",
     stack_size = 16
@@ -69,33 +104,24 @@ data:extend(
     },
     attack_parameters =
     {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 10,
-      damage_modifier = 20.0,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 40,
-      sound = make_laser_sounds(),
+      type = "beam",
+      cooldown = 8,
+      range = 60,
+      damage_modifier = 25,
       ammo_type =
       {
-        type = "projectile",
-        category = "electric",
-        energy_consumption = "450KJ",
-        projectile = "laser",
-        speed = 1,
-        action = 
+        category = "laser",
+        energy_consumption = "150kJ",
+        action =
         {
+          type = "direct",
+          action_delivery =
           {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 3.75
-              }
-            }
+            type = "beam",
+            beam = "laser-beam",
+            max_length = 60,
+            duration = 1,
+            source_offset = {0, -1.31439 }
           }
         }
       }
@@ -109,7 +135,7 @@ data:extend(
     icon = "__CMod__/graphics/icons/vehicle-laser-defense-equipment-mk2.png",
     icon_size = 32,
     placed_as_equipment_result = "cmod-vehicle-laser-defense-equipment-mk2",
-    flags = {"goes-to-main-inventory"},
+
     group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "b",
     stack_size = 16
@@ -151,33 +177,24 @@ data:extend(
     },
     attack_parameters =
     {
-      type = "projectile",
-      ammo_category = "electric",
-      cooldown = 5,
-      damage_modifier = 30.0,
-      projectile_center = {0, 0},
-      projectile_creation_distance = 0.6,
-      range = 55,
-      sound = make_laser_sounds(),
+      type = "beam",
+      cooldown = 3,
+      range = 75,
+      damage_modifier = 40,
       ammo_type =
       {
-        type = "projectile",
-        category = "electric",
-        energy_consumption = "850KJ",
-        projectile = "laser",
-        speed = 1,
-        action = 
+        category = "laser",
+        energy_consumption = "350kJ",
+        action =
         {
+          type = "direct",
+          action_delivery =
           {
-            type = "direct",
-            action_delivery =
-            {
-              {
-                type = "projectile",
-                projectile = "laser",
-                starting_speed = 3.75
-              }
-            }
+            type = "beam",
+            beam = "laser-beam",
+            max_length = 75,
+            duration = 1,
+            source_offset = {0, -1.31439 }
           }
         }
       }
@@ -191,7 +208,7 @@ data:extend(
     icon = "__CMod__/graphics/icons/vehicle-fusion-reactor-equipment.png",
     icon_size = 32,
     placed_as_equipment_result = "cmod-vehicle-fusion-reactor-equipment",
-    flags = {"goes-to-main-inventory"},
+
     group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "h",
     stack_size = 16
@@ -230,7 +247,7 @@ data:extend(
       usage_priority = "primary-output"
     },
     categories = {"vehicle"},
-    power = "7000KW"
+    power = "10MW"
   },
     {
     type = "item",
@@ -238,7 +255,7 @@ data:extend(
     icon = "__CMod__/graphics/icons/vehicle-fusion-reactor-equipment-mk2.png",
     icon_size = 32,
     placed_as_equipment_result = "cmod-vehicle-fusion-reactor-equipment-mk2",
-    flags = {"goes-to-main-inventory"},
+
     group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "i",
     stack_size = 16
@@ -278,7 +295,7 @@ data:extend(
       usage_priority = "primary-output"
     },
     categories = {"vehicle"},
-    power = "20000KW"
+    power = "40MW"
   },
   {
     type = "item",
@@ -286,7 +303,7 @@ data:extend(
     icon = "__CMod__/graphics/icons/vehicle-energy-sheild-equipment.png",
     icon_size = 32,
     placed_as_equipment_result = "cmod-vehicle-energy-shield-equipment",
-    flags = {"goes-to-main-inventory"},
+
     group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "n",
     stack_size = 16
@@ -336,7 +353,7 @@ data:extend(
     icon = "__CMod__/graphics/icons/vehicle-energy-shield-equipment-mk2.png",
     icon_size = 32,
     placed_as_equipment_result = "cmod-vehicle-energy-shield-equipment-mk2",
-    flags = {"goes-to-main-inventory"},
+
     group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "o",
     stack_size = 16
@@ -387,7 +404,7 @@ data:extend(
     icon = "__CMod__/graphics/icons/vehicle-battery-equipment.png",
     icon_size = 32,
     placed_as_equipment_result = "cmod-vehicle-battery-equipment",
-    flags = {"goes-to-main-inventory"},
+
     group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "q",
     stack_size = 16
@@ -424,10 +441,10 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "4800MJ",
+      buffer_capacity = "9600MJ",
       input_flow_limit = "750MW",
       output_flow_limit = "750MW",
-      usage_priority = "terciary"
+      usage_priority = "tertiary"
     }
   },
   {
@@ -436,7 +453,7 @@ data:extend(
     icon = "__CMod__/graphics/icons/vehicle-battery-equipment-mk2.png",
     icon_size = 32,
     placed_as_equipment_result = "cmod-vehicle-battery-equipment-mk2",
-    flags = {"goes-to-main-inventory"},
+
     group = "combat", subgroup = "cmod-vehicle-equipment",
     order = "r",
     stack_size = 16
@@ -475,11 +492,157 @@ data:extend(
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "15000MJ",
+      buffer_capacity = "45000MJ",
       input_flow_limit = "1750MW",
       output_flow_limit = "1750MW",
-      usage_priority = "terciary"
+      usage_priority = "tertiary"
     }
+  },
+  {
+    type = "item",
+    name = "cm-vehicle-roboport-mk1",
+    icon = "__CMod__/graphics/equipment/vehicle-roboport-equipment-mk1.png",
+    icon_size = 64,
+    placed_as_equipment_result = "cm-vehicle-roboport-mk1",
+
+    group = "combat", subgroup = "cmod-vehicle-equipment",
+    order = "s",
+    stack_size = 16
+  },
+  {
+    type = "recipe",
+    name = "cm-vehicle-roboport-mk1",
+    enabled = "true",
+    energy_required = 20,
+    ingredients =
+    {
+      {"personal-roboport-equipment", 1},
+      {"advanced-circuit", 15},
+      {"battery", 30}
+    },
+    result = "cm-vehicle-roboport-mk1"
+  },
+  {
+    type = "roboport-equipment",
+    name = "cm-vehicle-roboport-mk1",
+    take_result = "cm-vehicle-roboport-mk1",
+    sprite =
+    {
+      filename = "__CMod__/graphics/equipment/vehicle-roboport-equipment-mk1.png",
+      width = 64,
+      height = 64,
+      priority = "medium"
+    },
+    shape =
+    {
+      width = 2,
+      height = 2,
+      type = "full"
+    },
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "300MJ",
+      input_flow_limit = "50000KW",
+      usage_priority = "secondary-input"
+    },
+    charging_energy = "5000kW",
+
+    robot_limit = 50,
+    construction_radius = 75,
+    spawn_and_station_height = 0.4,
+    charge_approach_distance = 2.6,
+
+    recharging_animation =
+    {
+      filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
+      priority = "high",
+      width = 37,
+      height = 35,
+      frame_count = 16,
+      scale = 1.5,
+      animation_speed = 0.5
+    },
+    recharging_light = {intensity = 0.4, size = 5},
+    stationing_offset = {0, -0.6},
+    charging_station_shift = {0, 0.5},
+    charging_station_count = 20,
+    charging_distance = 1.6,
+    charging_threshold_distance = 5,
+    categories = {"vehicle"}
+  },
+  {
+    type = "item",
+    name = "cm-vehicle-roboport-mk2",
+    icon = "__CMod__/graphics/equipment/vehicle-roboport-equipment-mk2.png",
+    icon_size = 64,
+    placed_as_equipment_result = "cm-vehicle-roboport-mk2",
+
+    group = "combat", subgroup = "cmod-vehicle-equipment",
+    order = "s",
+    stack_size = 16
+  },
+  {
+    type = "recipe",
+    name = "cm-vehicle-roboport-mk2",
+    enabled = "true",
+    energy_required = 20,
+    ingredients =
+    {
+      {"personal-roboport-mk2-equipment", 1},
+      {"advanced-circuit", 45},
+      {"battery", 100}
+    },
+    result = "cm-vehicle-roboport-mk2"
+  },
+  {
+    type = "roboport-equipment",
+    name = "cm-vehicle-roboport-mk2",
+    take_result = "cm-vehicle-roboport-mk2",
+    sprite =
+    {
+      filename = "__CMod__/graphics/equipment/vehicle-roboport-equipment-mk2.png",
+      width = 64,
+      height = 64,
+      priority = "medium"
+    },
+    shape =
+    {
+      width = 2,
+      height = 2,
+      type = "full"
+    },
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "600MJ",
+      input_flow_limit = "75000KW",
+      usage_priority = "secondary-input"
+    },
+    charging_energy = "5000kW",
+
+    robot_limit = 100,
+    construction_radius = 125,
+    spawn_and_station_height = 0.4,
+    charge_approach_distance = 2.6,
+
+    recharging_animation =
+    {
+      filename = "__base__/graphics/entity/roboport/roboport-recharging.png",
+      priority = "high",
+      width = 37,
+      height = 35,
+      frame_count = 16,
+      scale = 1.5,
+      animation_speed = 0.5
+    },
+    recharging_light = {intensity = 0.4, size = 5},
+    stationing_offset = {0, -0.6},
+    charging_station_shift = {0, 0.5},
+    charging_station_count = 30,
+    charging_distance = 1.6,
+    charging_threshold_distance = 5,
+    categories = {"vehicle"}
   },
  }
  )

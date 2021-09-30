@@ -16,7 +16,7 @@ data:extend(
         name = "cm-inserter-vfast-ns",
         icon = "__CMod__/graphics/entity/inserters/linserter_icon.png",
         icon_size = 32,
-        flags = {"goes-to-quickbar"},
+    
         group = "yuoki",    
         subgroup = "y-tools",       
         order = "c2",
@@ -44,10 +44,10 @@ data:extend(
         selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
         pickup_position = {0, -1},
         insert_position = {0, 1.2},
-        energy_per_movement = 50000,
-        energy_per_rotation = 50000,
-        extension_speed = 1.0,
-        rotation_speed = 1.0,
+		energy_per_movement = "24kJ",
+		energy_per_rotation = "24kJ",
+        extension_speed = 5.0,
+        rotation_speed = 5.0,
         hand_size = 2.0,
         energy_source =
         {
@@ -109,7 +109,7 @@ data:extend(
             filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
             priority = "extra-high",
             width = 8,
-            height = 34
+            height = 33
         },
         hand_closed_shadow =
         {
@@ -131,12 +131,13 @@ data:extend(
                 priority = "extra-high",
                 width = 48,
                 height = 48,
-                shift = {0.125, 0},
+                shift = {0.22, 0},
                 filename = "__CMod__/graphics/entity/inserters/lng_ins_sheet.png"
             }
         },
-        circuit_wire_connection_point = inserter_circuit_wire_connection_point,
-        circuit_connector_sprites = inserter_circuit_connector_sprites,
-        circuit_wire_max_distance = inserter_circuit_wire_max_distance,
+    circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
+    circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+    circuit_wire_max_distance = inserter_circuit_wire_max_distance,
+    default_stack_control_input_signal = inserter_default_stack_control_input_signal
     },
 })

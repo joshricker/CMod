@@ -1,3 +1,9 @@
+require ("circuit-connector-sprites")
+require ("prototypes.compact-solar.accumulator_ain")
+local hit_effects = require ("prototypes.hit-effects")
+local explosion_animations = require("prototypes.explosion-animations")
+local sounds = require("prototypes.sounds")
+
 data:extend(
 {
   {
@@ -5,7 +11,7 @@ data:extend(
     name = "cm-advanced-accumulator",
     icon = "__CMod__/graphics/advanced-accumulator/advanced-accumulator-icon.png",
     icon_size = 32,
-    flags = {"goes-to-quickbar"},
+
     subgroup = "energy",
     order = "e-b",
     place_result = "cm-advanced-accumulator",
@@ -30,51 +36,32 @@ data:extend(
     icon = "__CMod__/graphics/advanced-accumulator/advanced-accumulator.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "cm-advanced-accumulator"},
-    max_health = 250,
-    corpse = "medium-remnants",
+    minable = {mining_time = 0.1, result = "cm-advanced-accumulator"},
+    max_health = 1500,
+    corpse = "accumulator-remnants",
+    dying_explosion = "accumulator-explosion",
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-1, -1}, {1, 1}},
+    damaged_trigger_effect = hit_effects.entity(),
+    drawing_box = {{-1, -1.5}, {1, 1}},
     energy_source =
     {
       type = "electric",
       buffer_capacity = "50MJ",
-      usage_priority = "terciary",
+      usage_priority = "tertiary",
       input_flow_limit = "3MW",
       output_flow_limit = "3MW"
     },
-    picture =
-    {
-      filename = "__CMod__/graphics/advanced-accumulator/advanced-accumulator.png",
-      priority = "extra-high",
-      width = 124,
-      height = 103,
-      shift = {0.7, -0.2}
-    },
-    charge_animation =
-    {
-      filename = "__CMod__/graphics/advanced-accumulator/advanced-accumulator-charge-animation.png",
-      width = 138,
-      height = 135,
-      line_length = 8,
-      frame_count = 24,
-      shift = {0.482, -0.638},
-      animation_speed = 0.5
-    },
+    picture = accumulator_picture({r=0.5, g=0.9, b=0.5, a=1}),
+    charge_animation = accumulator_charge({r=0.5, g=0.9, b=0.5, a=1}),
+    water_reflection = accumulator_reflection(),
+
     charge_cooldown = 30,
-    charge_light = {intensity = 0.3, size = 7},
-    discharge_animation =
-    {
-      filename = "__CMod__/graphics/advanced-accumulator/advanced-accumulator-discharge-animation.png",
-      width = 147,
-      height = 128,
-      line_length = 8,
-      frame_count = 24,
-      shift = {0.395, -0.525},
-      animation_speed = 0.5
-    },
+    charge_light = {intensity = 0.3, size = 15, color = {r = 1.0, g = 1.0, b = 1.0}},
+    discharge_animation = accumulator_discharge(),
     discharge_cooldown = 60,
-    discharge_light = {intensity = 0.7, size = 7},
+    discharge_light = {intensity = 0.7, size = 15, color = {r = 1.0, g = 1.0, b = 1.0}},
+    vehicle_impact_sound = sounds.generic_impact,
     working_sound =
     {
       sound =
@@ -82,12 +69,22 @@ data:extend(
         filename = "__base__/sound/accumulator-working.ogg",
         volume = 1
       },
-      idle_sound = {
+      idle_sound =
+      {
         filename = "__base__/sound/accumulator-idle.ogg",
-        volume = 0.4
+        volume = 0.5
       },
-      max_sounds_per_type = 5
+      --persistent = true,
+      max_sounds_per_type = 3,
+      fade_in_ticks = 10,
+      fade_out_ticks = 30
     },
+
+    circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
+    circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+
+    default_output_signal = {type = "virtual", name = "signal-A"}
   }
 }
 )

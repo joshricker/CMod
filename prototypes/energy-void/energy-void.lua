@@ -5,7 +5,7 @@ data:extend(
     name = "cm-energy-void",
     icon = "__CMod__/graphics/energy-void/energy-void-icon.png",
     icon_size = 32,
-    flags = {"goes-to-quickbar"},
+
     subgroup = "energy",
     order = "e-c",
     place_result = "cm-energy-void",
@@ -37,7 +37,7 @@ data:extend(
     {
       type = "electric",
       buffer_capacity = "50000GJ",
-      usage_priority = "terciary",
+      usage_priority = "tertiary",
       input_flow_limit = "3000GW",
       output_flow_limit = "1W"
     },

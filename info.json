@@ -1,10 +1,12 @@
 {
   "name": "CMod",
-  "version": "0.3.01",
+  "version": "1.1.5",
   "title": "CMod",
   "author": "Codec",
   "homepage": "aiminecraft.com",
-  "factorio_version": "0.16",
-  "dependencies": ["base", "? Yuoki >= 0.2.40", "? yi_railway","? z_yira_UP", "? yi_engines", "? bobplates", "? bobelectronics", "? bobgreenhouse", "? angelspetrochem", "? Helicopters"],
-  "description": "Uh ya, about that."
+  "factorio_version": "1.1",
+  "dependencies": ["base >= 0.18", "?Yuoki >= 0.2.40", "?yi_railway", "?z_yira_UP", "?yi_engines", "?boblibrary", "?bobvehicleequipment", "?clusterio", "?bobores", "?bobtech", "?bobenemies", "?bobelectronics", "?bobgreenhouse", "?angelspetrochem", "?Helicopters", "?angelsrefining", "?DeadlockLoaders", "?DeadlockStacking", "?Warehousing"],
+  "description": "Holy balls its a description!"
 }
+
+

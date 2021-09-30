@@ -3,7 +3,7 @@ data:extend({
     type = "technology",
     name = "cm-running-speed-1",
     icon = "__base__/graphics/technology/exoskeleton-equipment.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -16,7 +16,7 @@ data:extend({
       count = 20,
       ingredients =
       {
-        {"science-pack-1", 1}
+        {"automation-science-pack", 1}
       },
       time = 10
     },
@@ -27,7 +27,7 @@ data:extend({
     type = "technology",
     name = "cm-running-speed-2",
     icon = "__base__/graphics/technology/exoskeleton-equipment.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -41,8 +41,8 @@ data:extend({
       count = 50,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1}
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1}
       },
       time = 20
     },
@@ -53,7 +53,7 @@ data:extend({
     type = "technology",
     name = "cm-running-speed-3",
     icon = "__base__/graphics/technology/exoskeleton-equipment.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
@@ -67,9 +67,9 @@ data:extend({
       count = 150,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1}
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1}
       },
       time = 60
     },

@@ -3,12 +3,12 @@ data:extend({
     type = "technology",
     name = "cm-character-logistic-slots-7",
     icon = "__base__/graphics/technology/character-logistic-slots.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
         type = "character-logistic-slots",
-        modifier = 6
+        modifier = 12
       }
     },
     prerequisites = {"character-logistic-slots-6"},
@@ -17,10 +17,10 @@ data:extend({
       count = 1300,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
-        {"high-tech-science-pack", 1}
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"utility-science-pack", 1}
       },
       time = 30
     },
@@ -31,12 +31,12 @@ data:extend({
     type = "technology",
     name = "cm-character-logistic-slots-8",
     icon = "__base__/graphics/technology/character-logistic-slots.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
         type = "character-logistic-slots",
-        modifier = 6
+        modifier = 12
       }
     },
     prerequisites = {"cm-character-logistic-slots-7"},
@@ -45,10 +45,10 @@ data:extend({
       count = 1350,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
-        {"high-tech-science-pack", 1}
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"utility-science-pack", 1}
       },
       time = 30
     },
@@ -59,12 +59,12 @@ data:extend({
     type = "technology",
     name = "cm-character-logistic-slots-9",
     icon = "__base__/graphics/technology/character-logistic-slots.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
         type = "character-logistic-slots",
-        modifier = 6
+        modifier = 12
       }
     },
     prerequisites = {"cm-character-logistic-slots-8"},
@@ -73,10 +73,10 @@ data:extend({
       count = 1450,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
-        {"high-tech-science-pack", 1}
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"utility-science-pack", 1}
       },
       time = 30
     },
@@ -87,12 +87,12 @@ data:extend({
     type = "technology",
     name = "cm-character-logistic-slots-10",
     icon = "__base__/graphics/technology/character-logistic-slots.png",
-    icon_size = 128,
+    icon_size = 256,
     effects =
     {
       {
         type = "character-logistic-slots",
-        modifier = 6
+        modifier = 12
       }
     },
     prerequisites = {"cm-character-logistic-slots-9"},
@@ -101,10 +101,10 @@ data:extend({
       count = 1650,
       ingredients =
       {
-        {"science-pack-1", 1},
-        {"science-pack-2", 1},
-        {"science-pack-3", 1},
-        {"high-tech-science-pack", 1}
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"utility-science-pack", 1}
       },
       time = 30
     },
