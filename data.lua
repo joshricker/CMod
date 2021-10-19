@@ -106,6 +106,226 @@ if data.raw["item"]["raw-rare-metals"] then
 		end
 end
 
+if data.raw.container["subspace-item-injector"] then
+  
+  data.raw.container["subspace-item-injector"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
+  data.raw.container["subspace-item-injector"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
+  data.raw.container["subspace-item-injector"]["picture"].layers = {
+    {
+        filename = "__subspace_storage__/graphics/entity/item-injector.png",
+        width = 254,
+        height = 242,
+        scale = 0.36,
+        shift = util.by_pixel(0.0, 0.4),
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/item-injector-hr.png",
+            width = 506,
+            height = 483,
+            shift = util.by_pixel_hr(0.0, 0.6),
+            scale = 0.18,
+        },
+    },
+    {
+        filename = "__subspace_storage__/graphics/entity/item-shadow.png",
+        width = 111,
+        height = 201,
+        scale = 0.36,
+        shift = util.by_pixel(63.54, 7.38),
+        draw_as_shadow = true,
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/item-shadow-hr.png",
+            width = 222,
+            height = 401,
+            shift = util.by_pixel_hr(127.44, 14.94),
+            scale = 0.18,
+            draw_as_shadow = true,
+        }}}
+
+
+  data.raw["logistic-container"]["subspace-item-extractor"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
+  data.raw["logistic-container"]["subspace-item-extractor"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
+  data.raw["logistic-container"]["subspace-item-extractor"]["picture"].layers = {
+    {
+        filename = "__subspace_storage__/graphics/entity/item-extractor.png",
+        width = 254,
+        height = 242,
+        scale = 0.36,
+        shift = util.by_pixel(0.0, 0.36),
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/item-extractor-hr.png",
+            width = 506,
+            height = 483,
+            shift = util.by_pixel_hr(0.0, 0.54),
+            scale = 0.18,
+        }
+    },
+    {
+        filename = "__subspace_storage__/graphics/entity/item-shadow.png",
+        width = 111,
+        height = 201,
+        scale = 0.36,
+        shift = util.by_pixel(63.54, 7.38),
+        draw_as_shadow = true,
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/item-shadow-hr.png",
+            width = 222,
+            height = 401,
+            shift = util.by_pixel_hr(127.44, 14.94),
+            scale = 0.18,
+            draw_as_shadow = true,
+     }}}
+
+
+  data.raw["storage-tank"]["subspace-fluid-injector"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
+  data.raw["storage-tank"]["subspace-fluid-injector"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
+  data.raw["storage-tank"]["subspace-fluid-injector"]["fluid_box"].pipe_connections = {{type = "input", position = {0, -1.8}}, {type = "input", position = {0, 1.8}}, {type = "input", position = {1.8, 0}}, {type = "input", position = {-1.8, 0}}}
+  data.raw["storage-tank"]["subspace-fluid-injector"]["pictures"]["picture"].layers = {
+    {
+        filename = "__subspace_storage__/graphics/entity/fluid-injector.png",
+        width = 256,
+        height = 268,
+        scale = 0.36,
+        shift = util.by_pixel(0.0, 0.0),
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/fluid-injector-hr.png",
+            width = 512,
+            height = 534,
+            shift = util.by_pixel_hr(0.0, 0.0),
+            scale = 0.18,
+        }
+    },
+    {
+        filename = "__subspace_storage__/graphics/entity/fluid-shadow.png",
+        width = 354,
+        height = 226,
+        scale = 0.36,
+        shift = util.by_pixel(19.8, 9),
+        draw_as_shadow = true,
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/fluid-shadow-hr.png",
+            width = 708,
+            height = 453,
+            shift = util.by_pixel_hr(40, 18.135),
+            scale = 0.18,
+            draw_as_shadow = true,
+      }}}
+
+
+   data.raw["assembling-machine"]["subspace-fluid-extractor"].fluid_boxes = {
+     {
+       production_type = "output",
+       pipe_covers = pipecoverspictures(),
+       base_area = 250,
+       base_level = 1,
+       pipe_connections = {
+         { type = "output", position = {-1.8, 0} },
+         { type = "output", position = {1.8, 0} },
+         { type = "output", position = {0, 1.8} },
+         { type = "output", position = {0, -1.8} },
+       },
+    },
+    off_when_no_fluid_recipe = false,
+  }
+  data.raw["assembling-machine"]["subspace-fluid-extractor"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
+  data.raw["assembling-machine"]["subspace-fluid-extractor"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
+  data.raw["assembling-machine"]["subspace-fluid-extractor"]["animation"].layers = {
+    {
+        filename = "__subspace_storage__/graphics/entity/fluid-extractor.png",
+        width = 256,
+        height = 268,
+        scale = 0.36,
+        shift = util.by_pixel(0.0, 0.0),
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/fluid-extractor-hr.png",
+            width = 512,
+            height = 534,
+            shift = util.by_pixel_hr(0.0, 0.0),
+            scale = 0.18,
+        },
+    },
+    {
+        filename = "__subspace_storage__/graphics/entity/fluid-shadow.png",
+        width = 354,
+        height = 226,
+        scale = 0.36,
+        shift = util.by_pixel(19.8, 9),
+        draw_as_shadow = true,
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/fluid-shadow-hr.png",
+            width = 708,
+            height = 453,
+            shift = util.by_pixel_hr(40.0, 18.18),
+            scale = 0.18,
+            draw_as_shadow = true,
+        }}}
+
+  data.raw.accumulator["subspace-electricity-injector"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
+  data.raw.accumulator["subspace-electricity-injector"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
+  data.raw.accumulator["subspace-electricity-injector"]["picture"].layers = {
+    {
+        filename = "__subspace_storage__/graphics/entity/electricity-injector.png",
+        width = 256,
+        height = 251,
+        scale = 0.36,
+        shift = util.by_pixel(0.0, 0.54),
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/electricity-injector-hr.png",
+            width = 512,
+            height = 502,
+            shift = util.by_pixel_hr(0.0, 1.08),
+            scale = 0.18,
+        },
+    },
+    {
+        filename = "__subspace_storage__/graphics/entity/electricity-shadow.png",
+        width = 345,
+        height = 229,
+        scale = 0.36,
+        shift = util.by_pixel(21.42, 4.5),
+        draw_as_shadow = true,
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/electricity-shadow-hr.png",
+            width = 693,
+            height = 457,
+            shift = util.by_pixel_hr(42.66, 9.18),
+            scale = 0.18,
+            draw_as_shadow = true,
+        }}}
+
+  data.raw.accumulator["subspace-electricity-extractor"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
+  data.raw.accumulator["subspace-electricity-extractor"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
+  data.raw.accumulator["subspace-electricity-extractor"]["picture"].layers = {
+    {
+        filename = "__subspace_storage__/graphics/entity/electricity-extractor.png",
+        width = 256,
+        height = 251,
+        scale = 0.36,
+        shift = util.by_pixel(0.0, 0.54),
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/electricity-extractor-hr.png",
+            width = 512,
+            height = 502,
+            shift = util.by_pixel_hr(0.0, 1.8),
+            scale = 0.18,
+        },
+    },
+    {
+        filename = "__subspace_storage__/graphics/entity/electricity-shadow.png",
+        width = 345,
+        height = 229,
+        scale = 0.36,
+        shift = util.by_pixel(21.42, 4.5),
+        draw_as_shadow = true,
+        hr_version = {
+            filename = "__subspace_storage__/graphics/entity/electricity-shadow-hr.png",
+            width = 693,
+            height = 457,
+            shift = util.by_pixel_hr(42.66, 9.18),
+            scale = 0.18,
+            draw_as_shadow = true,
+        }}}
+end
+
 if data.raw["recipe"]["solid-plastic"] then
   data.raw["recipe"]["solid-plastic"].category = "chemistry"
     data.raw["recipe"]["solid-plastic"]["normal"].ingredients ={{type="fluid", name="liquid-plastic", amount=5}}
