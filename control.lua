@@ -14,9 +14,9 @@ function initPlayer(player)
     else
         player.insert{name = "construction-robot", count = 100}
     end
-    if game.item_prototypes["get-chest"] then
-        player.insert{name = "get-chest", count = 10}
-        player.insert{name = "put-chest", count = 10}
+    if game.item_prototypes["subspace-item-injector"] then
+        player.insert{name = "subspace-item-injector", count = 20}
+        player.insert{name = "subspace-item-extractor", count = 20}
     end
     player.insert{name = "landfill", count = 10000}
     player.insert{name = "cm-waterfill", count = 10000}
