@@ -1,20 +1,12 @@
-require("prototypes.groups.item-groups-transport")
+
 require("prototypes.technology.robotcapacity")
 require("prototypes.technology.crafting-speed")
 require("prototypes.technology.run-speed")
 require("prototypes.waterfill.waterfill")
-require("prototypes.energy-void.energy-void")
+
+require("prototypes.rocket-silo")
 --transport
-require("prototypes.transport.pipe-ground-1-30")
-require("prototypes.transport.pipe-ground-1-50")
-require("prototypes.transport.transport-belt-ground-1-30")
-require("prototypes.transport.transport-belt-ground-2-30")
-require("prototypes.transport.transport-belt-ground-3-30")
-require("prototypes.transport.transport-belt-ground-1-50")
-require("prototypes.transport.transport-belt-ground-2-50")
-require("prototypes.transport.transport-belt-ground-3-50")
-require("prototypes.transport.tech")
-require("prototypes.labs.labs")
+
 --Comp Solars and accumulators
 require("prototypes.compact-solar.advanced-accumulator")
 require("prototypes.compact-solar.elite-accumulator")
@@ -23,6 +15,7 @@ require("prototypes.compact-solar.advanced-solar")
 require("prototypes.compact-solar.elite-solar")
 require("prototypes.compact-solar.ultimate-solar")
 require("prototypes.compact-solar.compact-solar-technology")
+
 
 if data.raw["assembling-machine"]["y-crusher"] then
     require("prototypes.smart-stack.inserter-vfast-ns")
@@ -33,7 +26,6 @@ if data.raw["assembling-machine"]["y-crusher"] then
 end
 
 if data.raw["recipe"]["yir_coins_gen1_recipe"] then
-    require("prototypes.equipment.vehicle-equipment")
     require("prototypes.4aw-cargowagons.4aw_ironore")
     require("prototypes.4aw-cargowagons.4aw_copperore")
     require("prototypes.4aw-cargowagons.4aw_stone")
@@ -45,14 +37,23 @@ if data.raw["recipe"]["yir_coins_gen1_recipe"] then
     require("prototypes.4aw-cargowagons.4aw_rubyteore")
     require("prototypes.4aw-cargowagons.4aw_bobmoniumore")
 end
-data.raw["gun"]["artillery-wagon-cannon"]["attack_parameters"].range = 12 * 32
-data.raw.tool["automation-science-pack"].stack_size = 2000
-data.raw.tool["logistic-science-pack"].stack_size = 2000
-data.raw.tool["chemical-science-pack"].stack_size = 2000
-data.raw.tool["military-science-pack"].stack_size = 2000
-data.raw.tool["production-science-pack"].stack_size = 2000
-data.raw.tool["utility-science-pack"].stack_size = 2000
-data.raw.tool["space-science-pack"].stack_size = 2000
+
+require("prototypes.advanced-equipment.advanced-equipment")
+require("prototypes.advanced-equipment.vehicle-equipment")
+if data.raw["module"]["speed-module-8"] then
+  require("prototypes.advanced-equipment.advanced-equipment-recipes-bobs")
+  else
+    require("prototypes.advanced-equipment.advanced-equipment-recipes")
+end
+
+require("prototypes.void-chest.void-chest")
+require("prototypes.void-pipe.void-pipe")
+
+--for i, a in pairs(data.raw["fluid"]) do
+--    a.auto_barrel = true
+--end
+  
+
 data.raw.item["sulfur"].stack_size = 200
 data.raw["rail-planner"]["rail"].stack_size = 200
 data.raw.item["uranium-ore"].stack_size = 200
@@ -76,17 +77,72 @@ data.raw.item["refined-hazard-concrete"].stack_size = 10000
 data.raw.item["rocket-fuel"].stack_size = 100
 data.raw.item["low-density-structure"].stack_size = 100
 data.raw.item["rocket-control-unit"].stack_size = 100
-data.raw.module["speed-module"].stack_size = 100
-data.raw.module["speed-module-2"].stack_size = 100
-data.raw.module["speed-module-3"].stack_size = 100
-data.raw.module["productivity-module"].stack_size = 100
-data.raw.module["productivity-module-2"].stack_size = 100
-data.raw.module["productivity-module-3"].stack_size = 100
-data.raw.module["effectivity-module"].stack_size = 100
-data.raw.module["effectivity-module-2"].stack_size = 100
-data.raw.module["effectivity-module-3"].stack_size = 100
-data.raw.item["beacon"].stack_size = 50
-data.raw["fluid"]["steam"].auto_barrel = true
+data.raw.item["solid-fuel"].stack_size = 200
+require("prototypes.labs.labs")
+require("prototypes.transport.pipe-ground-1-30")
+require("prototypes.transport.pipe-ground-1-50")
+require("prototypes.transport.transport-belt-ground-1-30")
+require("prototypes.transport.transport-belt-ground-2-30")
+require("prototypes.transport.transport-belt-ground-3-30")
+require("prototypes.transport.transport-belt-ground-1-50")
+require("prototypes.transport.transport-belt-ground-2-50")
+require("prototypes.transport.transport-belt-ground-3-50")
+data.raw["gun"]["artillery-wagon-cannon"]["attack_parameters"].range = 12 * 32
+require("prototypes.energy-void.energy-void")
+require("prototypes.transport.tech")
+require("prototypes.groups.item-groups-transport")
+data.raw.gun["submachine-gun"].attack_parameters.sound = {{filename = "__CMod__/sounds/submachinegun.ogg", volume = 1 }}
+data.raw.character.character.inventory_size = 180
+
+
+if not settings.startup["lite_mode"].value then
+  require("prototypes.technology.insterter-capacity-bonus")
+  data.raw.tool["automation-science-pack"].stack_size = 2000
+  data.raw.tool["logistic-science-pack"].stack_size = 2000
+  data.raw.tool["chemical-science-pack"].stack_size = 2000
+  data.raw.tool["military-science-pack"].stack_size = 2000
+  data.raw.tool["production-science-pack"].stack_size = 2000
+  data.raw.tool["utility-science-pack"].stack_size = 2000
+  data.raw.tool["space-science-pack"].stack_size = 2000
+  data.raw.item["sulfur"].stack_size = 200
+  data.raw["rail-planner"]["rail"].stack_size = 200
+  data.raw.item["uranium-ore"].stack_size = 200
+  data.raw.item["iron-ore"].stack_size = 200
+  data.raw.item["copper-ore"].stack_size = 200
+  data.raw.item["coal"].stack_size = 200
+  data.raw.item["stone"].stack_size = 200
+  data.raw.item["wood"].stack_size = 500
+  data.raw.item["copper-cable"].stack_size = 500
+  data.raw.item["stone-brick"].stack_size = 10000
+  data.raw.item["iron-plate"].stack_size = 200
+  data.raw.item["steel-plate"].stack_size = 200
+  data.raw.item["copper-plate"].stack_size = 200
+  data.raw.item["pipe"].stack_size = 100
+  data.raw.item["steam-engine"].stack_size = 50
+  data.raw.item["hazard-concrete"].stack_size = 10000
+  data.raw.item["landfill"].stack_size = 10000
+  data.raw.item["concrete"].stack_size = 10000
+  data.raw.item["refined-concrete"].stack_size = 10000
+  data.raw.item["refined-hazard-concrete"].stack_size = 10000
+  data.raw.item["rocket-fuel"].stack_size = 100
+  data.raw.item["low-density-structure"].stack_size = 100
+  data.raw.item["rocket-control-unit"].stack_size = 100
+  data.raw.module["speed-module"].stack_size = 100
+  data.raw.module["speed-module-2"].stack_size = 100
+  data.raw.module["speed-module-3"].stack_size = 100
+  data.raw.module["productivity-module"].stack_size = 100
+  data.raw.module["productivity-module-2"].stack_size = 100
+  data.raw.module["productivity-module-3"].stack_size = 100
+  data.raw.module["effectivity-module"].stack_size = 100
+  data.raw.module["effectivity-module-2"].stack_size = 100
+  data.raw.module["effectivity-module-3"].stack_size = 100
+  data.raw.item["beacon"].stack_size = 50
+  data.raw["fluid"]["steam"].auto_barrel = true
+end
+
+if data.raw["assembling-machine"]["y-crusher"] then
+    data.raw.item["yi_beacon"].se_allow_in_space = true
+end
 
 data.raw["utility-sounds"]["default"]["armor_insert"] = {{filename = "__CMod__/sounds/xp-hardware-insert.ogg"}}
 data.raw["utility-sounds"]["default"]["armor_remove"] = {{filename = "__CMod__/sounds/xp-hardware-remove.ogg"}}
@@ -178,7 +234,7 @@ if data.raw.container["subspace-item-injector"] then
 
   data.raw["storage-tank"]["subspace-fluid-injector"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
   data.raw["storage-tank"]["subspace-fluid-injector"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
-  data.raw["storage-tank"]["subspace-fluid-injector"]["fluid_box"].pipe_connections = {{type = "input", position = {0, -1.8}}, {type = "input", position = {0, 1.8}}, {type = "input", position = {1.8, 0}}, {type = "input", position = {-1.8, 0}}}
+  data.raw["storage-tank"]["subspace-fluid-injector"]["fluid_box"].pipe_connections = {{type = "input", position = {0, -2}}, {type = "input", position = {0, 2}}, {type = "input", position = {2, 0}}, {type = "input", position = {-2, 0}}}
   data.raw["storage-tank"]["subspace-fluid-injector"]["pictures"]["picture"].layers = {
     {
         filename = "__subspace_storage__/graphics/entity/fluid-injector.png",
@@ -218,10 +274,10 @@ if data.raw.container["subspace-item-injector"] then
        base_area = 250,
        base_level = 1,
        pipe_connections = {
-         { type = "output", position = {-1.8, 0} },
-         { type = "output", position = {1.8, 0} },
-         { type = "output", position = {0, 1.8} },
-         { type = "output", position = {0, -1.8} },
+         { type = "output", position = {-2, 0} },
+         { type = "output", position = {2, 0} },
+         { type = "output", position = {0, 2} },
+         { type = "output", position = {0, -2} },
        },
     },
     off_when_no_fluid_recipe = false,

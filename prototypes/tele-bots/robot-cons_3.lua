@@ -4,7 +4,7 @@ conBot.minable = {hardness = 0.1, mining_time = 0.1, result = "cm-construction-r
 conBot.icon = "__CMod__/graphics/icons/icon-cm-construction-robot3.png"
 conBot.icon_size = 32
 conBot.max_health = 5000
-conBot.max_payload_size = 100
+conBot.max_payload_size = 200
 conBot.speed = 100000
 conBot.transfer_distance = 0.5
 conBot.max_energy = "30kJ"

@@ -4,7 +4,7 @@ logBot.minable = {hardness = 0.1, mining_time = 0.1, result = "cm-logistic-robot
 logBot.icon = "__CMod__/graphics/icons/icon-cm-logistic-robot3.png"
 logBot.icon_size = 32
 logBot.max_health = 5000
-logBot.max_payload_size = 100
+logBot.max_payload_size = 200
 logBot.speed = 100000
 logBot.transfer_distance = 0.5
 logBot.max_energy = "30kJ"

@@ -1,11 +1,11 @@
 {
   "name": "CMod",
-  "version": "1.1.5",
+  "version": "1.4.3",
   "title": "CMod",
   "author": "Codec",
   "homepage": "aiminecraft.com",
   "factorio_version": "1.1",
-  "dependencies": ["base >= 0.18", "?Yuoki >= 0.2.40", "?yi_railway", "?z_yira_UP", "?yi_engines", "?boblibrary", "?bobvehicleequipment", "?clusterio", "?bobores", "?bobtech", "?bobenemies", "?bobelectronics", "?bobgreenhouse", "?angelspetrochem", "?Helicopters", "?angelsrefining", "?DeadlockLoaders", "?DeadlockStacking", "?Warehousing"],
+  "dependencies": ["base >= 0.18", "?Yuoki >= 0.2.40", "?Deadlock-SE-bridge", "?yi_railway", "?z_yira_UP", "?yi_engines", "?boblibrary", "?bobvehicleequipment", "?clusterio", "?space-exploration", "?bobores", "?bobtech", "?bobenemies", "?bobelectronics", "?bobgreenhouse", "?angelspetrochem", "?Helicopters", "?angelsrefining", "?DeadlockLoaders", "?DeadlockStacking", "?Warehousing"],
   "description": "Holy balls its a description!"
 }
 

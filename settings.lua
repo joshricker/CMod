@@ -1,6 +1,12 @@
 data:extend({
    {
       type = "bool-setting",
+      name = "lite_mode",
+      setting_type = "startup",
+      default_value = false,
+   },
+   {
+      type = "bool-setting",
       name = "spawn_standardized_ore_patches",
       setting_type = "runtime-global",
       default_value = false,

@@ -49,7 +49,7 @@ data:extend(
 		energy_per_rotation = "24kJ",
         extension_speed = 5.0,
         rotation_speed = 5.0,
-        filter_count = 1,
+        filter_count = 5,
         hand_size = 2.0,
         energy_source =
         {

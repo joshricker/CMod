@@ -1,5 +1,5 @@
 local sounds = require("prototypes.sounds")
-require("prototypes.groups.item-groups-updates")
+
 
 for i, a in pairs(data.raw["rail-chain-signal"]) do
     a.resistances = a.resistances or {}
@@ -22,6 +22,7 @@ for i, a in pairs(data.raw["spider-vehicle"]) do
     a.equipment_grid = "spidertron-equipment-grid"
 
 end
+
 
 --for i, a in pairs(data.raw["radar"]) do
 --    a.max_distance_of_sector_revealed = 0
@@ -195,7 +196,7 @@ end
   },
 })
 
-productivityitemlist ={ "rail"}
+productivityitemlist ={ "rail", "concrete", "refined-concrete"}
 for _, module in pairs(data.raw.module) do
   if module.effect and module.limitation then
     for effect_name in pairs(module.effect) do
@@ -212,13 +213,7 @@ end
 data.raw["equipment-grid"]['spidertron-equipment-grid'].width = 16
 data.raw["equipment-grid"]['spidertron-equipment-grid'].height = 16
 data.raw["equipment-grid"]['spidertron-equipment-grid'].equipment_categories = {"car", "armor", "vehicle", "farl-equipment", "tank", "armoured-vehicle", "train", "locomotive", "armoured-train", "armoured-locomotive"}
-data.raw.tool["automation-science-pack"].stack_size = 2000
-data.raw.tool["logistic-science-pack"].stack_size = 2000
-data.raw.tool["chemical-science-pack"].stack_size = 2000
-data.raw.tool["military-science-pack"].stack_size = 2000
-data.raw.tool["production-science-pack"].stack_size = 2000
-data.raw.tool["utility-science-pack"].stack_size = 2000
-data.raw.tool["space-science-pack"].stack_size = 2000
+
 data.raw["character"]["character"].mining_speed = 4.0
 data.raw.tile["stone-path"].decorative_removal_probability = 1
 data.raw.tile["concrete"].decorative_removal_probability = 1
@@ -238,40 +233,9 @@ data.raw.character.character.build_distance = 4096
 data.raw.character.character.drop_item_distance = 4096
 data.raw.character.character.reach_distance = 4096
 data.raw.character.character.reach_resource_distance = 4096
-data.raw.item["sulfur"].stack_size = 200
-data.raw["rail-planner"]["rail"].stack_size = 200
-data.raw.item["uranium-ore"].stack_size = 200
-data.raw.item["iron-ore"].stack_size = 200
-data.raw.item["copper-ore"].stack_size = 200
-data.raw.item["coal"].stack_size = 200
-data.raw.item["stone"].stack_size = 200
-data.raw.item["wood"].stack_size = 500
-data.raw.item["copper-cable"].stack_size = 500
-data.raw.item["stone-brick"].stack_size = 10000
-data.raw.item["iron-plate"].stack_size = 200
-data.raw.item["steel-plate"].stack_size = 200
-data.raw.item["copper-plate"].stack_size = 200
-data.raw.item["pipe"].stack_size = 100
-data.raw.item["steam-engine"].stack_size = 50
-data.raw.item["hazard-concrete"].stack_size = 10000
-data.raw.item["landfill"].stack_size = 10000
-data.raw.item["concrete"].stack_size = 10000
-data.raw.item["refined-concrete"].stack_size = 10000
-data.raw.item["refined-hazard-concrete"].stack_size = 10000
-data.raw.item["rocket-fuel"].stack_size = 100
-data.raw.item["low-density-structure"].stack_size = 100
-data.raw.item["rocket-control-unit"].stack_size = 100
-data.raw.module["speed-module"].stack_size = 100
-data.raw.module["speed-module-2"].stack_size = 100
-data.raw.module["speed-module-3"].stack_size = 100
-data.raw.module["productivity-module"].stack_size = 100
-data.raw.module["productivity-module-2"].stack_size = 100
-data.raw.module["productivity-module-3"].stack_size = 100
-data.raw.module["effectivity-module"].stack_size = 100
-data.raw.module["effectivity-module-2"].stack_size = 100
-data.raw.module["effectivity-module-3"].stack_size = 100
+
 data.raw.item["beacon"].stack_size = 50
-data.raw["recipe"]["landfill"].result_count = 20
+data.raw["recipe"]["landfill"].result_count = 100
 data.raw["technology"]["spidertron"].unit = {ingredients = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"military-science-pack", 1},{"chemical-science-pack", 1}},time = 30,count = 450}
 data.raw["technology"]["spidertron"].prerequisites = {"tank","military-3"}
 data.raw["recipe"]["spidertron"].ingredients = {{"engine-unit", 64},{"steel-plate", 200},{"advanced-circuit", 20},{"radar", 2},{"raw-fish", 1}}
@@ -284,11 +248,6 @@ data.raw["artillery-wagon"]["artillery-wagon"].turn_after_shooting_cooldown = 15
 data.raw["artillery-turret"]["artillery-turret"].turn_after_shooting_cooldown = 15
 data.raw["fluid-turret"]["flamethrower-turret"].prepare_range = 48
 data.raw["fluid-turret"]["flamethrower-turret"]["attack_parameters"].range = 42
-data.raw["technology"]["logistic-system"]["unit"]["ingredients"] = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"chemical-science-pack", 1}}
-data.raw["technology"]["artillery"]["unit"]["ingredients"] = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"chemical-science-pack", 1},{"military-science-pack", 1}}
-data.raw["technology"]["military-4"]["unit"]["ingredients"] = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"chemical-science-pack", 1},{"military-science-pack", 1}}
-data.raw["technology"]["military-3"]["unit"]["ingredients"] = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"military-science-pack", 1}}
-data.raw["recipe"]["stack-inserter"].ingredients = {{"iron-gear-wheel", 15},{"electronic-circuit", 15},{"fast-inserter", 1}}
 data.raw["technology"]["inserter-capacity-bonus-1"].effects = {{type = "inserter-stack-size-bonus",modifier = 1},{type = "stack-inserter-capacity-bonus",modifier = 4}}
 data.raw["technology"]["inserter-capacity-bonus-2"].effects = {{type = "inserter-stack-size-bonus",modifier = 1},{type = "stack-inserter-capacity-bonus",modifier = 4}}
 data.raw["technology"]["inserter-capacity-bonus-3"].effects = {{type = "inserter-stack-size-bonus",modifier = 1},{type = "stack-inserter-capacity-bonus",modifier = 4}}
@@ -335,7 +294,33 @@ data.raw["inserter"]["fast-inserter"].extension_speed = 0.2
 data.raw["inserter"]["stack-inserter"].extension_speed = 0.2
 data.raw["inserter"]["stack-filter-inserter"].extension_speed = 0.2
 data.raw["inserter"]["filter-inserter"].extension_speed = 0.2
-data.raw.recipe["production-science-pack"].ingredients = {{"electric-furnace", 1},{"productivity-module", 1},{"rail", 15}}
+
+data.raw.item["sulfur"].stack_size = 200
+data.raw.item["solid-fuel"].stack_size = 200
+data.raw["rail-planner"]["rail"].stack_size = 200
+data.raw.item["uranium-ore"].stack_size = 200
+data.raw.item["iron-ore"].stack_size = 200
+data.raw.item["copper-ore"].stack_size = 200
+data.raw.item["coal"].stack_size = 200
+data.raw.item["stone"].stack_size = 200
+data.raw.item["wood"].stack_size = 500
+data.raw.item["copper-cable"].stack_size = 500
+data.raw.item["stone-brick"].stack_size = 10000
+data.raw.item["iron-plate"].stack_size = 200
+data.raw.item["steel-plate"].stack_size = 200
+data.raw.item["copper-plate"].stack_size = 200
+data.raw.item["pipe"].stack_size = 100
+data.raw.item["steam-engine"].stack_size = 50
+data.raw.item["hazard-concrete"].stack_size = 10000
+data.raw.item["landfill"].stack_size = 10000
+data.raw.item["concrete"].stack_size = 10000
+data.raw.item["refined-concrete"].stack_size = 10000
+data.raw.item["refined-hazard-concrete"].stack_size = 10000
+data.raw.item["low-density-structure"].stack_size = 100
+data.raw.item["rocket-control-unit"].stack_size = 100
+require("prototypes.groups.item-groups-updates")
+data.raw["technology"]["logistic-system"]["unit"]["ingredients"] = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"chemical-science-pack", 1}}
+data.raw["recipe"]["stack-inserter"].ingredients = {{"iron-gear-wheel", 15},{"electronic-circuit", 15},{"fast-inserter", 1}}
     
 if data.raw["recipe"]["catalysator-brown"] then
   data.raw["recipe"]["catalysator-brown"].results = {{type="item", name="catalysator-brown", amount=5}}
@@ -347,6 +332,58 @@ if data.raw["assembling-machine"]["kr-greenhouse"] then
   data.raw["assembling-machine"]["kr-greenhouse"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
   data.raw["assembling-machine"]["kr-bio-lab"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
 end
+
+if not settings.startup["lite_mode"].value then
+  data.raw.recipe["production-science-pack"].ingredients = {{"electric-furnace", 1},{"productivity-module", 1},{"rail", 15}}
+  data.raw.tool["automation-science-pack"].stack_size = 2000
+  data.raw.tool["logistic-science-pack"].stack_size = 2000
+  data.raw.tool["chemical-science-pack"].stack_size = 2000
+  data.raw.tool["military-science-pack"].stack_size = 2000
+  data.raw.tool["production-science-pack"].stack_size = 2000
+  data.raw.tool["utility-science-pack"].stack_size = 2000
+  data.raw.tool["space-science-pack"].stack_size = 2000
+  data.raw.item["rocket-fuel"].stack_size = 100
+  data.raw["technology"]["logistic-system"]["unit"]["ingredients"] = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"chemical-science-pack", 1}}
+  data.raw["technology"]["artillery"].prerequisites = {"rocketry"}
+  data.raw["technology"]["artillery"]["unit"]["ingredients"] = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"military-science-pack", 1}}
+  data.raw["technology"]["military-4"]["unit"]["ingredients"] = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"chemical-science-pack", 1},{"military-science-pack", 1}}
+  data.raw["technology"]["military-3"]["unit"]["ingredients"] = {{"automation-science-pack", 1},{"logistic-science-pack", 1},{"military-science-pack", 1}}
+  data.raw["recipe"]["stack-inserter"].ingredients = {{"iron-gear-wheel", 15},{"electronic-circuit", 15},{"fast-inserter", 1}}
+  data.raw.item["sulfur"].stack_size = 200
+  data.raw["rail-planner"]["rail"].stack_size = 200
+  data.raw.item["uranium-ore"].stack_size = 200
+  data.raw.item["iron-ore"].stack_size = 200
+  data.raw.item["copper-ore"].stack_size = 200
+  data.raw.item["coal"].stack_size = 200
+  data.raw.item["stone"].stack_size = 200
+  data.raw.item["wood"].stack_size = 500
+  data.raw.item["solid-fuel"].stack_size = 200
+  data.raw.item["copper-cable"].stack_size = 500
+  data.raw.item["stone-brick"].stack_size = 10000
+  data.raw.item["iron-plate"].stack_size = 200
+  data.raw.item["steel-plate"].stack_size = 200
+  data.raw.item["copper-plate"].stack_size = 200
+  data.raw.item["pipe"].stack_size = 100
+  data.raw.item["steam-engine"].stack_size = 50
+  data.raw.item["hazard-concrete"].stack_size = 10000
+  data.raw.item["landfill"].stack_size = 10000
+  data.raw.item["concrete"].stack_size = 10000
+  data.raw.item["refined-concrete"].stack_size = 10000
+  data.raw.item["refined-hazard-concrete"].stack_size = 10000
+  data.raw.item["rocket-fuel"].stack_size = 100
+  data.raw.item["low-density-structure"].stack_size = 100
+  data.raw.item["rocket-control-unit"].stack_size = 100
+  data.raw.module["speed-module"].stack_size = 100
+  data.raw.module["speed-module-2"].stack_size = 100
+  data.raw.module["speed-module-3"].stack_size = 100
+  data.raw.module["productivity-module"].stack_size = 100
+  data.raw.module["productivity-module-2"].stack_size = 100
+  data.raw.module["productivity-module-3"].stack_size = 100
+  data.raw.module["effectivity-module"].stack_size = 100
+  data.raw.module["effectivity-module-2"].stack_size = 100
+  data.raw.module["effectivity-module-3"].stack_size = 100
+end
+
 
 if pyhightech then 
 	data.raw["logistic-robot"]["logistic-robot-ht"].speed = 1.5
@@ -388,13 +425,17 @@ if data.raw["assembling-machine"]["y-crusher"] then
     data.raw["assembling-machine"]["y-crusher"].crafting_speed = 2.0
     data.raw["assembling-machine"]["y-crusher"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
     data.raw["recipe"]["y-water-gen-fluid-recipe"].results= {{type="fluid", name="water", amount=20000, },}
+    data.raw["electric-turret"]["y-weapon-ztt"]["energy_source"].rotation_speed = 1.0
+    data.raw["electric-turret"]["y-weapon-ztt"]["energy_source"].preparing_speed = 1.0
+    data.raw["electric-turret"]["y-weapon-ztt"]["energy_source"].folding_speed = 1.0
     data.raw["electric-turret"]["y-weapon-ztt"]["energy_source"].buffer_capacity = "150MJ"
     data.raw["electric-turret"]["y-weapon-ztt"]["energy_source"].input_flow_limit = "600MW"
-    data.raw["electric-turret"]["y-weapon-ztt"].attack_parameters = {type = "beam",cooldown = 5,range = 42,damage_modifier = 15,ammo_type = {category = "laser",energy_consumption = "4750kJ",action ={type = "direct",action_delivery = {type = "beam",beam = "laser-beam",max_length = 32,duration = 5,source_offset = {0, -1.31439 }}}}}
+    data.raw["electric-turret"]["y-weapon-ztt"]["energy_source"].drain = "12kW"
+    data.raw["electric-turret"]["y-weapon-ztt"].attack_parameters = {type = "beam",cooldown = 3,range = 52,damage_modifier = 20,ammo_type = {category = "laser",energy_consumption = "1750kJ",action ={type = "direct",action_delivery = {type = "beam",beam = "laser-beam",max_length = 52,duration = 3,source_offset = {0, -1.31439 }}}}}
     data.raw["electric-turret"]["y-laser-def-s4"]["energy_source"].buffer_capacity = "10MJ"
     data.raw["electric-turret"]["y-laser-def-s4"]["energy_source"].input_flow_limit = "10MW"
     data.raw["electric-turret"]["y-laser-def-s4"]["energy_source"].drain = "12kW"
-    data.raw["electric-turret"]["y-laser-def-s4"].attack_parameters = {type = "beam",cooldown = 6,range = 26,damage_modifier = 5,ammo_type = {category = "laser",energy_consumption = "150kJ",action ={type = "direct",action_delivery = {type = "beam",beam = "laser-beam",max_length = 26,duration = 6,source_offset = {0, -1.31439 }}}}}
+    data.raw["electric-turret"]["y-laser-def-s4"].attack_parameters = {type = "beam",cooldown = 6,range = 33,damage_modifier = 5,ammo_type = {category = "laser",energy_consumption = "150kJ",action ={type = "direct",action_delivery = {type = "beam",beam = "laser-beam",max_length = 26,duration = 6,source_offset = {0, -1.31439 }}}}}
     data.raw["electric-turret"]["y_turret_laser22f12"]["energy_source"].buffer_capacity = "10MJ"
     data.raw["electric-turret"]["y_turret_laser22f12"]["energy_source"].input_flow_limit = "10MW"
     data.raw["electric-turret"]["y_turret_laser22f12"]["energy_source"].drain = "12kW"
@@ -402,9 +443,10 @@ if data.raw["assembling-machine"]["y-crusher"] then
     ,source_offset = {0, -1.31439 }}}}}
     data.raw["radar"]["yi_radar"].max_distance_of_nearby_sector_revealed = 10
     data.raw["beacon"]["yi_beacon"].supply_area_distance = 7
-    data.raw["beacon"]["yi_beacon"].distribution_effectivity = 0.85
+    data.raw["beacon"]["yi_beacon"].distribution_effectivity = 0.95
     data.raw["beacon"]["yi_beacon"]["module_specification"].module_slots = 3
-    data.raw["recipe"]["y-wash-dirt-recipe"].results={{type="item", name="stone", amount=8, },{type="item", name="y-crystal2", amount=7, },{type="fluid", name="y-con_water", amount=300 }}
+    data.raw["beacon"]["yi_beacon"].energy_usage = "140kW"
+    data.raw["recipe"]["y-wash-dirt-recipe"].results={{type="item", name="stone", amount=27, },{type="item", name="y-crystal2", amount=11, },{type="fluid", name="y-con_water", amount=300 }}
     data.raw["recipe"]["y_mc_e2_mining_drill_recipe"].ingredients = {{"y-mining-drill-e2",1},{"y_rwtechsign",700},}
     data.raw["roboport"]["yi_roboport"].energy_source = {type = "electric",usage_priority = "secondary-input",input_flow_limit = "75MW",buffer_capacity = "800MJ"}
     data.raw["recipe"]["yi_roboport_recipe"].ingredients = {{ type = "item", name = "y_structure_element" , amount = 14, },{ type = "item", name = "yi_magnetron" , amount = 2, },{ type = "item", name = "y_blocked_capa" , amount = 2, },{ type = "item", name = "y-basic-t1-mf" , amount = 2, }}
@@ -428,15 +470,19 @@ if data.raw["assembling-machine"]["y-crusher"] then
     data.raw["construction-robot"]["yi_construction-robot"].max_energy = "7.5MJ"
     data.raw["recipe"]["y-ac-uc2copper-recipe"].enabled = "false"
     data.raw["recipe"]["y-ac-uc2iron-recipe"].enabled = "false"
-    data.raw["recipe"]["y-ac-uc2wood-recipe"].enabled = "false"
+    --data.raw["recipe"]["y-ac-uc2wood-recipe"].enabled = "false"
     data.raw["recipe"]["y-ac-uc2coal-recipe"].enabled = "false"
     data.raw["recipe"]["y-ac-uc2plastic-recipe"].enabled = "false"
-    --data.raw.module["y_modul_red2"].effect = { speed = {bonus = 0.325}, pollution = {bonus = 0.15}}
+    data.raw.module["y_modul_red2"].effect = { speed = {bonus = 1.25}, consumption = {bonus = -0.15 }}
     --data.raw.module["y_modul_science"].effect = { productivity = {bonus = 0.30}, consumption = {bonus = 1.0}, pollution = {bonus = 0.3}}
     data.raw["recipe"]["y-crush-unicomp-raw-recipe"].energy_required = 1.5
     data.raw["recipe"]["y-crush-fuel-raw-recipe"].energy_required = 1.5
+    if deadlock_stacking then
+      deadlock_stacking.create("y-res1", nil, "deadlock-stacking-1", 64)
+      deadlock_stacking.create("y-res2", nil, "deadlock-stacking-1", 64)
+    end
 
-    yproductivityitemlist ={ "y_slag_brick_burn_recipe", "y_slag_brick_recipe", "y_slag_granulate_recipe", "y_hps_steel_recipe", "y_hps_purecopper_recipe", "y_hps_pureiron_recipe", "y-basic-st2-mf-recipe","y-chip1-recipe", "y-chip2-recipe", "yi_magnetron_recipe", "y_ammo_plasma_recipe", "y-battery-single-use3-recipe", "y_blocked_capa_recipe", "y-crystal-cnd-recipe", "y-quantrinum-recipe", "y-fuel-reactor-recipe", "y-infused-mud-recipe", "y-infused-uca2-recipe", "y-mixfuel-load-recipe", "y-wooden-brikett-packed-recipe", "y-pure-copper-recipe", "y-pure-iron-recipe", "y-refined-copper", "y-refined-iron", "y-wash-dirt-recipe", "y-smelt-crush-res1-recipe", "y-smelt-crush-res2-recipe", "y_quantrinum_infusion_recipe", "y_structure_element_recipe", "y-bluegear-recipe", "y_structure_vessel_recipe", "y-basic-st1-mf-recipe", "y_chip_plate_recipe", "y_dotzetron_recipe", "y_structure_electric_recipe", "y-heat-pipe-recipe", "y-heat-pipe-recipe", "y-conductive-coil-1-recipe", "y-conductive-wire-1_recipe", "y-crush-unicomp-raw-recipe", "y-crush-fuel-raw-recipe", "y_slag_granulate_recipe", "y_steinmehl_recipe", "y-coaldust-recipe", "y_granulate_wood_recipe", "y-unicomp-raw-recipe", "y-raw-fuelnium-recipe", "y-bullet-case-recipe", "y_ammo_case_recipe", "yi_graphite_recipe", "y_data_crystal_recipe"}
+    yproductivityitemlist ={ "y_slag_brick_burn_recipe", "y_slag_brick_recipe", "y_slag_granulate_recipe", "y-orange-stuff_recipe", "y_hps_steel_recipe", "y_hps_purecopper_recipe", "y_hps_pureiron_recipe", "y-basic-st2-mf-recipe","y-chip1-recipe", "y-chip2-recipe", "yi_magnetron_recipe", "y_ammo_plasma_recipe", "y-battery-single-use3-recipe", "y_blocked_capa_recipe", "y-crystal-cnd-recipe", "y-quantrinum-recipe", "y-fuel-reactor-recipe", "y-infused-mud-recipe", "y-infused-uca2-recipe", "y-mixfuel-load-recipe", "y-wooden-brikett-packed-recipe", "y-pure-copper-recipe", "y-pure-iron-recipe", "y-refined-copper", "y-refined-iron", "y-wash-dirt-recipe", "y-smelt-crush-res1-recipe", "y-smelt-crush-res2-recipe", "y_quantrinum_infusion_recipe", "y_structure_element_recipe", "y-bluegear-recipe", "y_structure_vessel_recipe", "y-basic-st1-mf-recipe", "y_chip_plate_recipe", "y_dotzetron_recipe", "y_structure_electric_recipe", "y-heat-pipe-recipe", "y-heat-pipe-recipe", "y-conductive-coil-1-recipe", "y-conductive-wire-1_recipe", "y-crush-unicomp-raw-recipe", "y-crush-fuel-raw-recipe", "y_slag_granulate_recipe", "y_steinmehl_recipe", "y-coaldust-recipe", "y_granulate_wood_recipe", "y-unicomp-raw-recipe", "y-raw-fuelnium-recipe", "y-bullet-case-recipe", "y_ammo_case_recipe", "yi_graphite_recipe", "y_data_crystal_recipe"}
     for _, module in pairs(data.raw.module) do
         if module.effect and module.limitation then
             for effect_name in pairs(module.effect) do
@@ -474,6 +520,102 @@ end
 
 if data.raw["assembling-machine"]["yie_science_blue_gen"] then
     data.raw["assembling-machine"]["yie_science_blue_gen"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+end
+
+-------Space Exploration-------------------------------------------------
+
+if data.raw["assembling-machine"]["se-space-assembling-machine"] then
+  productivityitemlist ={ "se-space-coolant-cryonite", "se-space-coolant"}
+  for _, module in pairs(data.raw.module) do
+    if module.effect and module.limitation then
+      for effect_name in pairs(module.effect) do
+        if effect_name == "productivity"then
+      for _, item in pairs( productivityitemlist) do
+                  table.insert(module.limitation,    item)
+      end
+          break
+        end
+      end
+    end
+  end
+  if data.raw["offshore-pump"]["offshore-pump-output"] then
+    data.raw["offshore-pump"]["offshore-pump-output"].energy_source = {type = "void"}
+    data.raw["offshore-pump"]["offshore-pump-output"].energy_usage = "0w"
+  end
+  data.raw["offshore-pump"]["offshore-pump"].energy_source = {type = "void"}
+  data.raw["offshore-pump"]["offshore-pump"].energy_usage = "0w"
+  data.raw["pipe-to-ground"]["se-space-pipe-to-ground"].fluid_box.pipe_connections[2].max_underground_distance = 100
+  data.raw["assembling-machine"]["se-space-assembling-machine"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-manufactory"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-manufactory"].collision_mask = {"water-tile", "item-layer", "object-layer", "player-layer"}
+  data.raw["assembling-machine"]["se-space-radiation-laboratory"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-radiation-laboratory"].module_specification = {module_slots = 6}
+  data.raw["assembling-machine"]["se-space-radiation-laboratory"].collision_mask = {"water-tile", "item-layer", "object-layer", "player-layer"}
+  data.raw["assembling-machine"]["se-space-biochemical-laboratory"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-biochemical-laboratory"].collision_mask = {"water-tile", "item-layer", "object-layer", "player-layer"}
+  data.raw["assembling-machine"]["se-space-biochemical-laboratory"].module_specification = {module_slots = 8}
+  data.raw["assembling-machine"]["se-space-biochemical-laboratory"].crafting_speed = 10.0
+  data.raw["assembling-machine"]["se-space-decontamination-facility"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-plasma-generator"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-particle-collider"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-particle-accelerator"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-mechanical-laboratory"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-material-fabricator"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-electromagnetics-laboratory"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-genetics-laboratory"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-growth-facility"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-gravimetrics-laboratory"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-laser-laboratory"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-supercomputer-1"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-supercomputer-2"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-supercomputer-3"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-supercomputer-4"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-thermodynamics-laboratory"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["se-space-thermodynamics-laboratory"].module_specification = {module_slots = 6}
+  data.raw["assembling-machine"]["se-space-thermodynamics-laboratory"].crafting_speed = 6.0
+  data.raw["assembling-machine"]["se-space-manufactory"].module_specification = {module_slots = 8}
+  data.raw["mining-drill"]["se-core-miner-drill"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["mining-drill"]["se-core-miner-drill"].module_specification = {module_slots = 6}
+  data.raw["mining-drill"]["se-core-miner-drill"].mining_speed = 200
+  data.raw["item"]["se-space-manufactory"].stack_size = 20
+  data.raw["equipment-grid"]["se-thruster-suit-grid"].width = 16
+  data.raw["equipment-grid"]["se-thruster-suit-grid"].height = 16
+  data.raw["equipment-grid"]["se-thruster-suit-2-grid"].width = 18
+  data.raw["equipment-grid"]["se-thruster-suit-2-grid"].height = 18
+  data.raw["equipment-grid"]["se-thruster-suit-3-grid"].width = 20
+  data.raw["equipment-grid"]["se-thruster-suit-3-grid"].height = 20
+  data.raw["equipment-grid"]["se-thruster-suit-4-grid"].width = 24
+  data.raw["equipment-grid"]["se-thruster-suit-4-grid"].height = 24
+  data.raw["transport-belt"]["se-space-transport-belt"].fast_replaceable_group = "transport-belt"
+  data.raw.recipe["se-space-transport-belt"].normal.result_count = 2
+  data.raw.recipe["se-space-transport-belt"].normal.energy_required = 1
+  data.raw["underground-belt"]["se-space-underground-belt"].fast_replaceable_group = "transport-belt"
+  data.raw["underground-belt"]["se-space-underground-belt"].max_distance = 10
+  data.raw.recipe["se-space-underground-belt"].result_count = 2
+  data.raw.recipe["se-space-underground-belt"].energy_required = 2
+  data.raw["splitter"]["se-space-splitter"].fast_replaceable_group = "transport-belt"
+  data.raw.recipe["se-space-splitter"].energy_required = 2
+  if data.raw["furnace"]["se-space-transport-belt-beltbox"] then
+      data.raw.recipe["se-space-transport-belt-beltbox"].energy_required = 2
+  end
+  if data.raw["loader-1x1"]["se-space-transport-belt-loader"] then
+      data.raw.recipe["se-space-transport-belt-loader"].energy_required = 2
+  end
+  local deep_space_variants = {"black", "blue", "white", "red", "cyan", "magenta", "yellow", "green"}
+  for _, name in ipairs(deep_space_variants) do
+      data.raw["transport-belt"]["se-deep-space-transport-belt-" .. name].fast_replaceable_group = "transport-belt"
+      data.raw["underground-belt"]["se-deep-space-underground-belt-" .. name].fast_replaceable_group = "transport-belt"
+      data.raw["splitter"]["se-deep-space-splitter-" .. name].fast_replaceable_group = "transport-belt"
+  end
+  data.raw.recipe["se-deep-space-underground-belt"].energy_required = 10
+  data.raw.recipe["se-deep-space-splitter"].energy_required = 10
+  data.raw.recipe["se-deep-space-transport-belt-loader-black"].energy_required = 10
+  data.raw.recipe["se-deep-space-transport-belt-beltbox"].energy_required = 10
+    if data.raw.furnace["se-space-transport-belt-beltbox"] then
+      data.raw.furnace["se-space-transport-belt-beltbox"].allowed_effects = {"consumption", "speed", "pollution"}
+      data.raw.furnace["se-space-transport-belt-beltbox"].module_specification = {module_slots = 2}
+      data.raw.furnace["se-space-transport-belt-beltbox"].crafting_speed = 30.0
+    end
 end
 
 -----Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP----------Yuoki Rail With UP-----
@@ -518,6 +660,32 @@ if data.raw["assembling-machine"]["ye_fassembly1"] then
     data.raw["assembling-machine"]["ye_fassembly2"].crafting_speed = 5.0
     data.raw["assembling-machine"]["ye_fassembly_sp"].module_specification = {module_slots = 6}
     data.raw["assembling-machine"]["ye_fassembly_sp"].ingredient_count = 255
+    data:extend{
+      {type = "recipe-category", name = "basic-crafting-0"},
+      {type = "recipe-category", name = "crafting-0"},
+    }
+    for _,name in pairs{"ye_fassembly1", "ye_fassembly2", "ye_fassembly_sp"} do
+      local categories = data.raw["assembling-machine"][name].crafting_categories
+      table.insert(categories, "basic-crafting")
+      table.insert(categories, "basic-crafting-0")
+      table.insert(categories, "crafting-0")
+      table.insert(categories, "crafting-with-fluid")
+      table.insert(categories, "crafting")
+      table.insert(categories, "advanced-crafting")
+    end
+  data.raw["assembling-machine"]["ye_farm"].module_specification = {module_slots = 4}
+  data.raw["assembling-machine"]["ye_farm"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["ye_farm"].crafting_speed = 3.0
+  data.raw["assembling-machine"]["ye_meatfarm"].module_specification = {module_slots = 4}
+  data.raw["assembling-machine"]["ye_meatfarm"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["ye_meatfarm"].crafting_speed = 3.0
+  data.raw["assembling-machine"]["ye_pool"].module_specification = {module_slots = 4}
+  data.raw["assembling-machine"]["ye_pool"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["ye_pool"].crafting_speed = 3.0
+  data.raw["assembling-machine"]["ye_icemaker"].module_specification = {module_slots = 4}
+  data.raw["assembling-machine"]["ye_icemaker"].allowed_effects = {"consumption", "speed", "productivity", "pollution"}
+  data.raw["assembling-machine"]["ye_icemaker"].crafting_speed = 3.0
+
 end
 
 if data.raw["car"]["heli-entity-_-"] then
@@ -535,31 +703,11 @@ end
 if deadlock_stacking then
 	deadlock_stacking.create("rail", nil, "deadlock-stacking-1", 64)
 	data.raw.furnace["express-transport-belt-beltbox"].allowed_effects = {"consumption", "speed", "pollution"}
-    data.raw.furnace["express-transport-belt-beltbox"].module_specification = {module_slots = 2}
-    data.raw.furnace["express-transport-belt-beltbox"].crafting_speed = 30.0
-	if data.raw.item["slag"] then
-		deadlock_stacking.create("solid-carbon", nil, "deadlock-stacking-1", 32)
-    deadlock_stacking.create("slag", nil, "deadlock-stacking-1", 32)
-	end
-    if data.raw.item["basic-circuit-board"] then
-      data.raw.recipe["transport-belt-beltbox"]["ingredients"] = {{"transport-belt",4},{"basic-circuit-board", 2},{"iron-gear-wheel",10}}
-      data.raw.recipe["fast-transport-belt-beltbox"]["ingredients"] = {{"transport-belt-beltbox",1},{"electronic-circuit", 4},{"iron-gear-wheel",20}}
-		  deadlock_stacking.create("basic-circuit-board", nil, "deadlock-stacking-1", 64)
-		  deadlock_stacking.create("electronic-circuit", nil, "deadlock-stacking-1", 64)
-		  deadlock_stacking.create("advanced-circuit", nil, "deadlock-stacking-2", 64)
-		  deadlock_stacking.create("processing-unit", nil, "deadlock-stacking-2", 64)
-		  deadlock_stacking.create("carbon", nil, "deadlock-stacking-1", 32)
-
-    end
-    if data.raw.item["y-res1"] then
-      deadlock_stacking.create("y-res1", nil, "deadlock-stacking-1", 32)
-      deadlock_stacking.create("y-res2", nil, "deadlock-stacking-1", 32)
-      deadlock_stacking.create("y-crush-yres1", nil, "deadlock-stacking-1", 32)
-      deadlock_stacking.create("y-crush-yres2", nil, "deadlock-stacking-1", 32)
-      deadlock_stacking.create("y-richdust", nil, "deadlock-stacking-1", 32)
-      deadlock_stacking.create("y-slag", nil, "deadlock-stacking-1", 32)
-      deadlock_stacking.create("y-orange-stuff", nil, "deadlock-stacking-1", 32)
-    end
+  data.raw.furnace["express-transport-belt-beltbox"].module_specification = {module_slots = 2}
+  data.raw.furnace["express-transport-belt-beltbox"].crafting_speed = 30.0
+  data.raw.furnace["fast-transport-belt-beltbox"].allowed_effects = {"consumption", "speed", "pollution"}
+  data.raw.furnace["fast-transport-belt-beltbox"].module_specification = {module_slots = 2}
+  data.raw.furnace["fast-transport-belt-beltbox"].crafting_speed = 10.0
 end
 
 if data.raw["item"]["warehouse-basic"] then
@@ -581,6 +729,13 @@ if data.raw.item["subspace-item-injector"] then
   data.raw["logistic-container"]["subspace-item-extractor"].inventory_size = 2000
   data.raw.recipe["subspace-electricity-injector"].ingredients =  {{"steel-chest", 1},{"electronic-circuit", 50}}
   data.raw.recipe["subspace-electricity-extractor"].ingredients =  {{"steel-chest", 1},{"electronic-circuit", 50}}
+end
+
+--KS Power-------------------------------------------------------------------------------------------------------
+
+if data.raw["burner-generator"]["big-burner-generator"] then
+  data.raw["burner-generator"]["big-burner-generator"].burner.effectivity = 0.95
+  data.raw["burner-generator"]["burner-generator"].burner.effectivity = 0.85
 end
 
 if data.raw["recipe"]["solid-plastic"] then
